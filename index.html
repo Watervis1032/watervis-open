@@ -13,155 +13,164 @@
 
   <style>
     :root {
-      --ink: #f5f7fb;
-      --muted: rgba(231, 241, 249, 0.72);
-      --line: rgba(174, 209, 230, 0.22);
-      --blue: #61c8fa;
-      --blue-deep: #031426;
-      --gold: #d6ad66;
-      --card: rgba(6, 26, 43, 0.68);
+      --bg: #020a13;
+      --deep: #031426;
+      --deep-2: #06243c;
+      --paper: #eef7fb;
+      --text: #f6fbff;
+      --muted: rgba(223, 239, 248, 0.70);
+      --dim: rgba(223, 239, 248, 0.50);
+      --line: rgba(171, 217, 241, 0.20);
+      --blue: #6ed5ff;
+      --blue-soft: #bcecff;
+      --gold: #d9ae66;
+      --glass: rgba(7, 35, 56, 0.72);
     }
 
     * { box-sizing: border-box; }
 
-    html { background: #020913; }
+    html { background: var(--bg); }
 
     body {
       margin: 0;
       min-width: 320px;
-      color: var(--ink);
+      color: var(--text);
       background:
-        radial-gradient(circle at 50% -8%, rgba(52, 179, 241, 0.30), transparent 30rem),
-        radial-gradient(circle at 10% 54%, rgba(0, 124, 197, 0.12), transparent 28rem),
-        linear-gradient(180deg, #071c31 0%, #04101e 42%, #020913 100%);
+        radial-gradient(circle at 50% -9%, rgba(51, 176, 235, 0.33), transparent 29rem),
+        radial-gradient(circle at 86% 29%, rgba(15, 115, 169, 0.16), transparent 25rem),
+        linear-gradient(180deg, #08223a 0%, #031426 40%, #020a13 100%);
       font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     .page {
       position: relative;
-      overflow: hidden;
-      max-width: 620px;
+      max-width: 640px;
       min-height: 100vh;
       margin: 0 auto;
-      padding: 28px 20px 42px;
+      padding: 28px 20px 44px;
+      overflow: hidden;
       isolation: isolate;
     }
 
-    .page::before,
-    .page::after {
+    .page::before {
       position: absolute;
       z-index: -1;
+      top: -70px;
+      left: 50%;
+      width: 150%;
+      height: 430px;
       content: "";
+      transform: translateX(-50%);
+      opacity: .62;
+      background:
+        linear-gradient(100deg, transparent 37%, rgba(143, 229, 255, .14) 38%, transparent 49%),
+        linear-gradient(76deg, transparent 40%, rgba(143, 229, 255, .12) 41%, transparent 56%),
+        linear-gradient(91deg, transparent 48%, rgba(210, 248, 255, .12) 49%, transparent 63%);
+      filter: blur(2px);
       pointer-events: none;
     }
 
-    .page::before {
-      top: 0;
-      left: 50%;
-      width: 160%;
-      height: 430px;
-      transform: translateX(-50%);
-      opacity: 0.55;
-      background:
-        linear-gradient(105deg, transparent 37%, rgba(133, 225, 255, 0.13) 38%, transparent 48%),
-        linear-gradient(78deg, transparent 43%, rgba(133, 225, 255, 0.12) 44%, transparent 55%),
-        linear-gradient(90deg, transparent 48%, rgba(180, 240, 255, 0.12) 49%, transparent 60%);
-      filter: blur(2px);
-    }
-
     .page::after {
-      right: -60px;
-      bottom: 180px;
-      width: 230px;
-      height: 230px;
-      border: 1px solid rgba(116, 216, 255, 0.10);
+      position: absolute;
+      z-index: -1;
+      right: -90px;
+      bottom: 360px;
+      width: 260px;
+      height: 260px;
+      content: "";
+      border: 1px solid rgba(113, 202, 238, .10);
       border-radius: 50%;
       box-shadow:
-        -160px 92px 0 -105px rgba(116, 216, 255, 0.08),
-        -92px -22px 0 -85px rgba(116, 216, 255, 0.07);
+        -172px 110px 0 -105px rgba(113, 202, 238, .08),
+        -90px -20px 0 -82px rgba(113, 202, 238, .06);
+      pointer-events: none;
     }
 
     .brand {
       display: flex;
       justify-content: center;
-      padding: 12px 0 36px;
+      padding: 8px 0 32px;
     }
 
     .brand img {
       display: block;
-      width: min(100%, 282px);
+      width: min(100%, 286px);
       height: auto;
-      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
+      filter: drop-shadow(0 9px 22px rgba(0, 0, 0, .34));
     }
 
-    .intro {
+    .hero {
       text-align: center;
     }
 
-    .eyebrow {
-      margin: 0 0 16px;
+    .eyebrow,
+    .section-label {
+      margin: 0;
       color: var(--blue);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.24em;
+      font-size: .70rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
     }
 
+    h1, h2, h3, p { margin-top: 0; }
+
     h1 {
-      margin: 0;
+      margin: 15px 0 0;
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(2.15rem, 8vw, 3.5rem);
+      font-size: clamp(2.1rem, 8.6vw, 3.5rem);
       font-weight: 500;
-      line-height: 1.33;
-      letter-spacing: -0.055em;
+      line-height: 1.32;
+      letter-spacing: -.065em;
       text-wrap: balance;
     }
 
-    h1 .accent {
+    h1 .light {
       display: inline-block;
-      color: #a7e0fb;
-      text-shadow: 0 0 25px rgba(107, 211, 255, 0.28);
+      color: #a9e4ff;
+      text-shadow: 0 0 24px rgba(103, 215, 255, .26);
     }
 
     .event-title {
       display: inline-block;
-      margin: 34px 0 0;
-      padding: 14px 24px 13px;
-      border-top: 1px solid rgba(214, 173, 102, 0.60);
-      border-bottom: 1px solid rgba(214, 173, 102, 0.60);
-      color: #ffffff;
+      margin: 31px 0 0;
+      padding: 13px 22px 12px;
+      border-top: 1px solid rgba(217, 174, 102, .60);
+      border-bottom: 1px solid rgba(217, 174, 102, .60);
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(1.33rem, 4.8vw, 1.8rem);
+      font-size: clamp(1.30rem, 4.7vw, 1.78rem);
       font-weight: 500;
-      letter-spacing: -0.03em;
+      letter-spacing: -.035em;
     }
 
     .event-date {
-      margin: 20px 0 0;
+      margin: 18px 0 0;
       color: var(--gold);
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(1.03rem, 3.7vw, 1.24rem);
-      letter-spacing: 0.015em;
+      font-size: clamp(1.02rem, 3.65vw, 1.22rem);
+      letter-spacing: .01em;
     }
 
-    .drop {
+    .water-mark {
+      position: relative;
       display: block;
       width: 18px;
-      height: 25px;
-      margin: 28px auto 27px;
-      border: 1px solid #9ee5ff;
-      border-radius: 60% 60% 65% 65%;
+      height: 24px;
+      margin: 25px auto 29px;
+      border: 1px solid #a7e8ff;
+      border-radius: 68% 68% 72% 72%;
       transform: rotate(45deg);
-      box-shadow: 0 0 18px rgba(83, 211, 255, 0.55);
+      box-shadow: 0 0 18px rgba(83, 211, 255, .54);
     }
 
     .visual {
       position: relative;
-      height: clamp(350px, 72vw, 470px);
+      height: clamp(336px, 71vw, 472px);
       overflow: hidden;
-      border: 1px solid rgba(151, 215, 245, 0.18);
+      border: 1px solid rgba(151, 215, 245, .18);
       border-radius: 24px;
       background: #041523;
-      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.32);
+      box-shadow: 0 28px 60px rgba(0, 0, 0, .31);
     }
 
     .visual::before {
@@ -170,80 +179,276 @@
       inset: 0;
       content: "";
       background:
-        linear-gradient(180deg, rgba(3, 15, 28, 0.30) 0%, rgba(3, 15, 28, 0.02) 43%, rgba(2, 11, 21, 0.84) 100%),
-        radial-gradient(circle at 50% 20%, rgba(74, 195, 255, 0.20), transparent 36%);
+        linear-gradient(180deg, rgba(2, 15, 28, .38) 0%, rgba(2, 15, 28, .03) 42%, rgba(2, 10, 19, .84) 100%),
+        radial-gradient(circle at 50% 17%, rgba(86, 202, 255, .22), transparent 38%);
       pointer-events: none;
     }
 
     .visual img.hero-image {
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 50% 79%;
-      transform: scale(1.17);
+      object-position: 50% 80%;
+      transform: scale(1.18);
       filter: saturate(1.08) contrast(1.05);
     }
 
-    .visual-brand {
+    .visual-caption {
       position: absolute;
       z-index: 2;
       right: 22px;
-      bottom: 23px;
+      bottom: 21px;
       left: 22px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .visual-brand img {
-      width: min(100%, 230px);
-      height: auto;
-      filter: drop-shadow(0 5px 18px rgba(0, 0, 0, 0.55));
-    }
-
-    .message {
-      margin: 32px auto 0;
-      padding: 25px 24px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--card);
-      backdrop-filter: blur(9px);
-      color: #d9ecf7;
-      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: 1.07rem;
-      line-height: 1.88;
-      letter-spacing: -0.025em;
       text-align: center;
     }
 
+    .visual-caption img {
+      width: min(100%, 215px);
+      height: auto;
+      filter: drop-shadow(0 5px 18px rgba(0,0,0,.56));
+    }
+
+    .intro-copy {
+      margin: 30px auto 0;
+      padding: 24px 23px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--glass);
+      color: #e1f1f8;
+      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
+      font-size: 1.05rem;
+      line-height: 1.88;
+      letter-spacing: -.028em;
+      text-align: center;
+      backdrop-filter: blur(9px);
+    }
+
+    .section {
+      margin-top: 52px;
+    }
+
+    .section-heading {
+      margin: 12px 0 0;
+      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
+      font-size: clamp(1.65rem, 5.5vw, 2.15rem);
+      font-weight: 500;
+      letter-spacing: -.06em;
+      line-height: 1.38;
+    }
+
+    .section-description {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: .98rem;
+      line-height: 1.82;
+      letter-spacing: -.02em;
+    }
+
+    .product-panel {
+      position: relative;
+      margin-top: 23px;
+      padding: 24px 21px 21px;
+      overflow: hidden;
+      border: 1px solid rgba(163, 216, 240, .18);
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, rgba(24, 91, 127, .30), rgba(5, 25, 41, .78) 58%),
+        rgba(6, 28, 46, .62);
+    }
+
+    .product-panel::after {
+      position: absolute;
+      top: -80px;
+      right: -52px;
+      width: 188px;
+      height: 188px;
+      content: "";
+      border: 1px solid rgba(124, 214, 252, .10);
+      border-radius: 50%;
+      box-shadow: -65px 74px 0 -52px rgba(124, 214, 252, .06);
+    }
+
+    .product-kicker {
+      margin: 0;
+      color: var(--gold);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+    }
+
+    .product-name {
+      margin: 10px 0 0;
+      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
+      font-size: 1.55rem;
+      font-weight: 500;
+      letter-spacing: -.06em;
+    }
+
+    .product-copy {
+      position: relative;
+      z-index: 1;
+      margin: 12px 0 0;
+      color: #d8edf7;
+      font-size: .95rem;
+      line-height: 1.82;
+      letter-spacing: -.025em;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .metric {
+      min-height: 116px;
+      padding: 14px 10px 13px;
+      border: 1px solid rgba(176, 224, 244, .16);
+      border-radius: 14px;
+      background: rgba(0, 13, 24, .22);
+      text-align: center;
+    }
+
+    .metric-number {
+      display: block;
+      color: var(--gold);
+      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
+      font-size: clamp(1.33rem, 5vw, 1.76rem);
+      line-height: 1.05;
+      letter-spacing: -.055em;
+    }
+
+    .metric-word {
+      display: block;
+      margin-top: 7px;
+      color: #e7f4fa;
+      font-size: .73rem;
+      font-weight: 600;
+      line-height: 1.42;
+      letter-spacing: -.02em;
+    }
+
+    .metric-sub {
+      display: block;
+      margin-top: 3px;
+      color: var(--dim);
+      font-size: .65rem;
+      line-height: 1.35;
+    }
+
+    .info-list {
+      margin-top: 18px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 14px;
+      padding: 16px 2px;
+      border-bottom: 1px solid rgba(174, 209, 230, .13);
+    }
+
+    .info-row:last-child { border-bottom: 0; }
+
+    .info-label {
+      color: var(--blue);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+    }
+
+    .info-value {
+      color: #f0f8fb;
+      font-size: .93rem;
+      line-height: 1.62;
+      letter-spacing: -.02em;
+    }
+
+    .pouch-grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .pouch-card {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 15px;
+      align-items: start;
+      padding: 18px 17px;
+      border: 1px solid rgba(174, 219, 243, .17);
+      border-radius: 16px;
+      background: rgba(6, 31, 50, .58);
+    }
+
+    .pouch-index {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(110, 213, 255, .45);
+      border-radius: 50%;
+      color: var(--blue-soft);
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+
+    .pouch-card h3 {
+      margin: 0;
+      color: #f2f9fc;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -.025em;
+    }
+
+    .pouch-card p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.72;
+      letter-spacing: -.02em;
+    }
+
+    .event-section {
+      margin-top: 52px;
+      padding-top: 2px;
+    }
+
     .details {
-      margin-top: 16px;
+      margin-top: 21px;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
     .detail {
       display: grid;
-      grid-template-columns: 68px 1fr;
+      grid-template-columns: 67px 1fr;
       gap: 16px;
       align-items: start;
-      padding: 19px 4px;
-      border-bottom: 1px solid rgba(174, 209, 230, 0.13);
+      padding: 18px 4px;
+      border-bottom: 1px solid rgba(174, 209, 230, .13);
     }
 
     .detail:last-child { border-bottom: 0; }
 
     .detail-label {
       color: var(--blue);
-      font-size: 0.79rem;
+      font-size: .79rem;
       font-weight: 700;
-      letter-spacing: 0.13em;
+      letter-spacing: .13em;
     }
 
     .detail-value {
       color: #f3f8fb;
-      font-size: 0.97rem;
+      font-size: .97rem;
       line-height: 1.7;
-      letter-spacing: -0.02em;
+      letter-spacing: -.02em;
     }
 
     .map-link {
@@ -252,13 +457,13 @@
       justify-content: center;
       gap: 8px;
       width: 100%;
-      margin-top: 24px;
+      margin-top: 23px;
       padding: 17px 20px;
-      border: 1px solid rgba(113, 209, 249, 0.54);
+      border: 1px solid rgba(113, 209, 249, .54);
       border-radius: 999px;
       color: #e6f7ff;
-      background: rgba(12, 67, 100, 0.42);
-      font-size: 0.98rem;
+      background: rgba(12, 67, 100, .44);
+      font-size: .97rem;
       font-weight: 600;
       text-decoration: none;
       transition: transform 160ms ease, background 160ms ease;
@@ -266,7 +471,7 @@
 
     .map-link:hover,
     .map-link:focus-visible {
-      background: rgba(23, 110, 157, 0.62);
+      background: rgba(23, 110, 157, .62);
       transform: translateY(-2px);
     }
 
@@ -281,29 +486,31 @@
     }
 
     .footer {
-      margin-top: 36px;
+      margin-top: 42px;
       text-align: center;
     }
 
     .footer img {
       width: min(100%, 168px);
       height: auto;
-      opacity: 0.93;
-      filter: drop-shadow(0 5px 16px rgba(0, 0, 0, 0.45));
+      opacity: .95;
+      filter: drop-shadow(0 5px 16px rgba(0,0,0,.45));
     }
 
     .footer p {
-      margin: 16px 0 0;
-      color: rgba(212, 232, 243, 0.52);
-      font-size: 0.73rem;
-      letter-spacing: 0.06em;
+      margin: 15px 0 0;
+      color: rgba(212, 232, 243, .52);
+      font-size: .71rem;
+      letter-spacing: .06em;
     }
 
     @media (max-width: 390px) {
       .page { padding-right: 16px; padding-left: 16px; }
-      .brand { padding-bottom: 28px; }
+      .brand { padding-bottom: 26px; }
       .event-title { padding-right: 17px; padding-left: 17px; }
-      .message { padding-right: 19px; padding-left: 19px; }
+      .intro-copy { padding-right: 18px; padding-left: 18px; }
+      .metric { padding-right: 7px; padding-left: 7px; }
+      .metric-word { font-size: .69rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -318,56 +525,147 @@
       <img src="assets/logos/watervis-white.png" alt="WATERVIS" />
     </header>
 
-    <section class="intro" aria-labelledby="invitation-title">
+    <section class="hero" aria-labelledby="invitation-title">
       <p class="eyebrow">OPENING INVITATION</p>
       <h1 id="invitation-title">
         1032m 깊이의 가치를<br />
-        <span class="accent">새로운 형태로</span><br />
+        <span class="light">새로운 형태로</span><br />
         담아냅니다.
       </h1>
 
       <p class="event-title">파우치 워터 공장 오픈식</p>
       <p class="event-date">2026년 7월 10일 (금) 오후 2시부터</p>
-      <span class="drop" aria-hidden="true"></span>
+      <span class="water-mark" aria-hidden="true"></span>
     </section>
 
     <section class="visual" aria-label="몸愛좋은물 Gold 파우치 워터">
       <img class="hero-image" src="assets/images/opening-hero.png" alt="" />
-      <div class="visual-brand">
+      <div class="visual-caption">
         <img src="assets/logos/bodygoodwater-white.png" alt="몸愛좋은물" />
       </div>
     </section>
 
-    <p class="message">
+    <p class="intro-copy">
       워터비스가 깊은 바다의 가치를 더 가까이 전하기 위해<br />
       파우치 워터 공장을 새롭게 엽니다.<br />
       그 첫 순간에 함께해 주시기를 바랍니다.
     </p>
 
-    <section class="details" aria-label="행사 안내">
-      <div class="detail">
-        <div class="detail-label">일시</div>
-        <div class="detail-value">2026년 7월 10일 (금) 오후 2시부터</div>
+    <section class="section" aria-labelledby="product-heading">
+      <p class="section-label">PRODUCT OVERVIEW</p>
+      <h2 class="section-heading" id="product-heading">
+        깊이, 미네랄, 그리고<br />새로운 파우치 경험
+      </h2>
+      <p class="section-description">
+        몸愛좋은물 Gold는 강원도 양양 원포에서 취수한 해양심층수를
+        350mL 스탠드 파우치에 담은 프리미엄 먹는해양심층수입니다.
+      </p>
+
+      <div class="product-panel">
+        <p class="product-kicker">PREMIUM DEEP SEA WATER</p>
+        <h3 class="product-name">몸愛좋은물 Gold</h3>
+        <p class="product-copy">
+          깊은 바다의 원수 특성과 경도 300mg/L의 미네랄 기준을 바탕으로,
+          일상 가까이에서 경험할 수 있도록 설계했습니다.
+        </p>
+
+        <div class="metrics" aria-label="제품 핵심 수치">
+          <div class="metric">
+            <span class="metric-number">1,032m</span>
+            <span class="metric-word">취수 수심</span>
+            <span class="metric-sub">DEEP SEA ORIGIN</span>
+          </div>
+          <div class="metric">
+            <span class="metric-number">300mg/L</span>
+            <span class="metric-word">경도 기준</span>
+            <span class="metric-sub">HARDNESS</span>
+          </div>
+          <div class="metric">
+            <span class="metric-number">350mL</span>
+            <span class="metric-word">스탠드 파우치</span>
+            <span class="metric-sub">STAND POUCH</span>
+          </div>
+        </div>
       </div>
-      <div class="detail">
-        <div class="detail-label">장소</div>
-        <div class="detail-value">
-          (주)워터비스 파우치 워터 공장 옆 가든<br />
-          강원특별자치도 양양군 현남면 원포1길 53
+
+      <div class="info-list" aria-label="제품 사양">
+        <div class="info-row">
+          <div class="info-label">취수 해역</div>
+          <div class="info-value">강원도 양양 원포</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">식품 유형</div>
+          <div class="info-value">먹는해양심층수</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">포장 단위</div>
+          <div class="info-value">350mL 스탠드 파우치 · 30개 / 박스</div>
         </div>
       </div>
     </section>
 
-    <a class="map-link"
-       href="https://map.naver.com/p/search/강원특별자치도%20양양군%20현남면%20원포1길%2053"
-       target="_blank"
-       rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M20 10.7c0 5.2-8 10.3-8 10.3S4 15.9 4 10.7A8 8 0 1 1 20 10.7Z"></path>
-        <circle cx="12" cy="10.7" r="2.5"></circle>
-      </svg>
-      네이버지도에서 길찾기
-    </a>
+    <section class="section" aria-labelledby="pouch-heading">
+      <p class="section-label">WHY POUCH</p>
+      <h2 class="section-heading" id="pouch-heading">
+        깊은 바다의 가치를<br />더 가볍고, 더 가까이
+      </h2>
+
+      <div class="pouch-grid">
+        <article class="pouch-card">
+          <span class="pouch-index">01</span>
+          <div>
+            <h3>세워 보관하는 스탠드 구조</h3>
+            <p>바닥면이 넓어 자립 보관이 가능하도록 설계한 350mL 파우치입니다.</p>
+          </div>
+        </article>
+
+        <article class="pouch-card">
+          <span class="pouch-index">02</span>
+          <div>
+            <h3>빛 노출을 고려한 불투명 필름</h3>
+            <p>제품 보관 환경과 경험을 고려해 불투명 OPA 필름을 적용했습니다.</p>
+          </div>
+        </article>
+
+        <article class="pouch-card">
+          <span class="pouch-index">03</span>
+          <div>
+            <h3>일상에 맞춘 휴대와 사용성</h3>
+            <p>이동·보관·음용이 자연스럽게 이어지는 파우치 워터 경험을 제안합니다.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="event-section" aria-labelledby="event-heading">
+      <p class="section-label">OPENING INFORMATION</p>
+      <h2 class="section-heading" id="event-heading">오픈식 안내</h2>
+
+      <div class="details">
+        <div class="detail">
+          <div class="detail-label">일시</div>
+          <div class="detail-value">2026년 7월 10일 (금) 오후 2시부터</div>
+        </div>
+        <div class="detail">
+          <div class="detail-label">장소</div>
+          <div class="detail-value">
+            (주)워터비스 파우치 워터 공장 옆 가든<br />
+            강원특별자치도 양양군 현남면 원포1길 53
+          </div>
+        </div>
+      </div>
+
+      <a class="map-link"
+         href="https://map.naver.com/p/search/강원특별자치도%20양양군%20현남면%20원포1길%2053"
+         target="_blank"
+         rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 10.7c0 5.2-8 10.3-8 10.3S4 15.9 4 10.7A8 8 0 1 1 20 10.7Z"></path>
+          <circle cx="12" cy="10.7" r="2.5"></circle>
+        </svg>
+        네이버지도에서 길찾기
+      </a>
+    </section>
 
     <footer class="footer">
       <img src="assets/logos/bodygoodwater-white.png" alt="몸愛좋은물" />
