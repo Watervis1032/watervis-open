@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#031426" />
+  <meta name="theme-color" content="#041727" />
   <meta name="description" content="WATERVIS 파우치 워터 공장 오픈식 초대장" />
   <title>WATERVIS | 파우치 워터 공장 오픈식</title>
 
@@ -13,41 +13,38 @@
 
   <style>
     :root {
-      --bg: #020a13;
-      --deep: #031426;
-      --deep-2: #06243c;
-      --paper: #eef7fb;
-      --text: #f6fbff;
-      --muted: rgba(223, 239, 248, 0.70);
-      --dim: rgba(223, 239, 248, 0.50);
-      --line: rgba(171, 217, 241, 0.20);
-      --blue: #6ed5ff;
-      --blue-soft: #bcecff;
-      --gold: #d9ae66;
-      --glass: rgba(7, 35, 56, 0.72);
+      --navy: #03131f;
+      --navy-2: #061f34;
+      --ink: #f5fbff;
+      --muted: rgba(226, 241, 249, .72);
+      --dim: rgba(219, 236, 245, .52);
+      --cyan: #72d5ff;
+      --cyan-soft: #b7ebff;
+      --gold: #d7ad68;
+      --line: rgba(157, 214, 241, .20);
+      --panel: rgba(7, 30, 49, .74);
     }
 
     * { box-sizing: border-box; }
 
-    html { background: var(--bg); }
+    html { background: #020a12; }
 
     body {
       margin: 0;
       min-width: 320px;
-      color: var(--text);
+      color: var(--ink);
       background:
-        radial-gradient(circle at 50% -9%, rgba(51, 176, 235, 0.33), transparent 29rem),
-        radial-gradient(circle at 86% 29%, rgba(15, 115, 169, 0.16), transparent 25rem),
-        linear-gradient(180deg, #08223a 0%, #031426 40%, #020a13 100%);
+        radial-gradient(circle at 50% -10%, rgba(50, 165, 221, .32), transparent 31rem),
+        radial-gradient(circle at 100% 38%, rgba(19, 103, 153, .13), transparent 26rem),
+        linear-gradient(180deg, #08233a 0%, #031422 44%, #020a12 100%);
       font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     .page {
       position: relative;
       max-width: 640px;
-      min-height: 100vh;
       margin: 0 auto;
-      padding: 28px 20px 44px;
+      padding: 26px 20px 42px;
       overflow: hidden;
       isolation: isolate;
     }
@@ -55,167 +52,121 @@
     .page::before {
       position: absolute;
       z-index: -1;
-      top: -70px;
+      top: -110px;
       left: 50%;
-      width: 150%;
-      height: 430px;
+      width: 155%;
+      height: 500px;
       content: "";
       transform: translateX(-50%);
-      opacity: .62;
+      opacity: .55;
       background:
-        linear-gradient(100deg, transparent 37%, rgba(143, 229, 255, .14) 38%, transparent 49%),
-        linear-gradient(76deg, transparent 40%, rgba(143, 229, 255, .12) 41%, transparent 56%),
-        linear-gradient(91deg, transparent 48%, rgba(210, 248, 255, .12) 49%, transparent 63%);
+        linear-gradient(101deg, transparent 37%, rgba(152, 229, 255, .14) 38%, transparent 50%),
+        linear-gradient(79deg, transparent 42%, rgba(152, 229, 255, .12) 43%, transparent 56%),
+        linear-gradient(92deg, transparent 49%, rgba(215, 248, 255, .10) 50%, transparent 62%);
       filter: blur(2px);
-      pointer-events: none;
-    }
-
-    .page::after {
-      position: absolute;
-      z-index: -1;
-      right: -90px;
-      bottom: 360px;
-      width: 260px;
-      height: 260px;
-      content: "";
-      border: 1px solid rgba(113, 202, 238, .10);
-      border-radius: 50%;
-      box-shadow:
-        -172px 110px 0 -105px rgba(113, 202, 238, .08),
-        -90px -20px 0 -82px rgba(113, 202, 238, .06);
       pointer-events: none;
     }
 
     .brand {
       display: flex;
       justify-content: center;
-      padding: 8px 0 32px;
+      padding: 8px 0 31px;
     }
 
     .brand img {
-      display: block;
       width: min(100%, 286px);
       height: auto;
-      filter: drop-shadow(0 9px 22px rgba(0, 0, 0, .34));
+      filter: drop-shadow(0 8px 22px rgba(0,0,0,.38));
+    }
+
+    .eyebrow,
+    .section-label {
+      margin: 0;
+      color: var(--cyan);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
     }
 
     .hero {
       text-align: center;
     }
 
-    .eyebrow,
-    .section-label {
-      margin: 0;
-      color: var(--blue);
-      font-size: .70rem;
-      font-weight: 700;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-    }
-
     h1, h2, h3, p { margin-top: 0; }
 
     h1 {
-      margin: 15px 0 0;
+      margin: 14px 0 0;
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(1.92rem, 7.2vw, 2.92rem);
+      font-size: clamp(2.1rem, 8vw, 3.32rem);
       font-weight: 500;
-      line-height: 1.40;
+      line-height: 1.35;
       letter-spacing: -.065em;
       text-wrap: balance;
     }
 
-    h1 .light {
+    h1 .accent {
       display: inline-block;
       color: #a9e4ff;
-      text-shadow: 0 0 24px rgba(103, 215, 255, .26);
+      text-shadow: 0 0 25px rgba(102, 212, 255, .28);
     }
 
     .event-title {
       display: inline-block;
-      margin: 31px 0 0;
+      margin: 30px 0 0;
       padding: 13px 22px 12px;
-      border-top: 1px solid rgba(217, 174, 102, .60);
-      border-bottom: 1px solid rgba(217, 174, 102, .60);
+      border-top: 1px solid rgba(215, 173, 104, .63);
+      border-bottom: 1px solid rgba(215, 173, 104, .63);
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(1.30rem, 4.7vw, 1.78rem);
+      font-size: clamp(1.28rem, 4.7vw, 1.75rem);
       font-weight: 500;
-      letter-spacing: -.035em;
+      letter-spacing: -.04em;
     }
 
     .event-date {
       margin: 18px 0 0;
       color: var(--gold);
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(1.02rem, 3.65vw, 1.22rem);
+      font-size: clamp(1.01rem, 3.7vw, 1.22rem);
       letter-spacing: .01em;
     }
 
-    .water-mark {
-      position: relative;
+    .drop {
       display: block;
-      width: 18px;
+      width: 17px;
       height: 24px;
-      margin: 25px auto 29px;
-      border: 1px solid #a7e8ff;
-      border-radius: 68% 68% 72% 72%;
+      margin: 26px auto 28px;
+      border: 1px solid #a8e8ff;
+      border-radius: 67% 67% 72% 72%;
       transform: rotate(45deg);
-      box-shadow: 0 0 18px rgba(83, 211, 255, .54);
+      box-shadow: 0 0 18px rgba(83, 211, 255, .55);
     }
 
-    .visual {
+    .hero-image-wrap {
       position: relative;
-      aspect-ratio: 2 / 3;
       overflow: hidden;
       border: 1px solid rgba(151, 215, 245, .18);
       border-radius: 24px;
-      background: #041523;
-      box-shadow: 0 28px 60px rgba(0, 0, 0, .31);
+      background: #061725;
+      box-shadow: 0 28px 60px rgba(0,0,0,.34);
     }
 
-    .visual::before {
-      position: absolute;
-      z-index: 1;
-      inset: 0;
-      content: "";
-      background:
-        linear-gradient(180deg, rgba(2, 15, 28, .05) 0%, rgba(2, 15, 28, 0) 45%, rgba(2, 10, 19, .16) 100%);
-      pointer-events: none;
-    }
-
-    .visual img.hero-image {
+    .hero-image-wrap img {
       display: block;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      filter: saturate(1.03) contrast(1.03);
-    }
-
-    .product-signature {
-      display: flex;
-      justify-content: center;
-      margin-top: 16px;
-      padding: 0 0 3px;
-    }
-
-    .product-signature img {
-      width: min(100%, 118px);
       height: auto;
-      opacity: .93;
-      filter: drop-shadow(0 5px 13px rgba(0,0,0,.42));
     }
 
     .intro-copy {
-      margin: 30px auto 0;
-      padding: 24px 23px;
+      margin: 28px auto 0;
+      padding: 24px 22px;
       border: 1px solid var(--line);
       border-radius: 18px;
-      background: var(--glass);
-      color: #e1f1f8;
+      background: var(--panel);
+      color: #e4f3fa;
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: 1.05rem;
-      line-height: 1.88;
+      font-size: 1.04rem;
+      line-height: 1.87;
       letter-spacing: -.028em;
       text-align: center;
       backdrop-filter: blur(9px);
@@ -228,16 +179,16 @@
     .section-heading {
       margin: 12px 0 0;
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(1.65rem, 5.5vw, 2.15rem);
+      font-size: clamp(1.65rem, 5.6vw, 2.17rem);
       font-weight: 500;
-      letter-spacing: -.06em;
       line-height: 1.38;
+      letter-spacing: -.06em;
     }
 
     .section-description {
       margin: 16px 0 0;
       color: var(--muted);
-      font-size: .98rem;
+      font-size: .97rem;
       line-height: 1.82;
       letter-spacing: -.02em;
     }
@@ -245,25 +196,24 @@
     .product-panel {
       position: relative;
       margin-top: 23px;
-      padding: 24px 21px 21px;
+      padding: 24px 20px 20px;
       overflow: hidden;
-      border: 1px solid rgba(163, 216, 240, .18);
+      border: 1px solid rgba(162, 216, 241, .19);
       border-radius: 20px;
       background:
-        linear-gradient(135deg, rgba(24, 91, 127, .30), rgba(5, 25, 41, .78) 58%),
-        rgba(6, 28, 46, .62);
+        linear-gradient(135deg, rgba(26, 94, 130, .30), rgba(5, 26, 43, .83) 58%),
+        rgba(4, 24, 40, .68);
     }
 
     .product-panel::after {
       position: absolute;
-      top: -80px;
-      right: -52px;
-      width: 188px;
-      height: 188px;
+      top: -73px;
+      right: -49px;
+      width: 185px;
+      height: 185px;
       content: "";
-      border: 1px solid rgba(124, 214, 252, .10);
+      border: 1px solid rgba(125, 214, 252, .10);
       border-radius: 50%;
-      box-shadow: -65px 74px 0 -52px rgba(124, 214, 252, .06);
     }
 
     .product-kicker {
@@ -277,7 +227,7 @@
     .product-name {
       margin: 10px 0 0;
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: 1.55rem;
+      font-size: 1.56rem;
       font-weight: 500;
       letter-spacing: -.06em;
     }
@@ -286,10 +236,10 @@
       position: relative;
       z-index: 1;
       margin: 12px 0 0;
-      color: #d8edf7;
-      font-size: .95rem;
+      color: #d9edf7;
+      font-size: .94rem;
       line-height: 1.82;
-      letter-spacing: -.025em;
+      letter-spacing: -.024em;
     }
 
     .metrics {
@@ -301,10 +251,10 @@
 
     .metric {
       min-height: 116px;
-      padding: 14px 10px 13px;
+      padding: 14px 8px 12px;
       border: 1px solid rgba(176, 224, 244, .16);
       border-radius: 14px;
-      background: rgba(0, 13, 24, .22);
+      background: rgba(0, 13, 24, .23);
       text-align: center;
     }
 
@@ -312,26 +262,25 @@
       display: block;
       color: var(--gold);
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(1.33rem, 5vw, 1.76rem);
-      line-height: 1.05;
+      font-size: clamp(1.3rem, 5vw, 1.75rem);
+      line-height: 1.04;
       letter-spacing: -.055em;
     }
 
     .metric-word {
       display: block;
       margin-top: 7px;
-      color: #e7f4fa;
-      font-size: .73rem;
+      color: #e9f5fb;
+      font-size: .72rem;
       font-weight: 600;
       line-height: 1.42;
-      letter-spacing: -.02em;
     }
 
     .metric-sub {
       display: block;
       margin-top: 3px;
       color: var(--dim);
-      font-size: .65rem;
+      font-size: .64rem;
       line-height: 1.35;
     }
 
@@ -343,7 +292,7 @@
 
     .info-row {
       display: grid;
-      grid-template-columns: 76px 1fr;
+      grid-template-columns: 77px 1fr;
       gap: 14px;
       padding: 16px 2px;
       border-bottom: 1px solid rgba(174, 209, 230, .13);
@@ -352,14 +301,14 @@
     .info-row:last-child { border-bottom: 0; }
 
     .info-label {
-      color: var(--blue);
+      color: var(--cyan);
       font-size: .76rem;
       font-weight: 700;
-      letter-spacing: .12em;
+      letter-spacing: .11em;
     }
 
     .info-value {
-      color: #f0f8fb;
+      color: #f1f8fb;
       font-size: .93rem;
       line-height: 1.62;
       letter-spacing: -.02em;
@@ -390,7 +339,7 @@
       height: 40px;
       border: 1px solid rgba(110, 213, 255, .45);
       border-radius: 50%;
-      color: var(--blue-soft);
+      color: var(--cyan-soft);
       font-size: .74rem;
       font-weight: 700;
       letter-spacing: .06em;
@@ -412,12 +361,11 @@
       letter-spacing: -.02em;
     }
 
-    .event-section {
+    .opening-section {
       margin-top: 52px;
-      padding-top: 2px;
     }
 
-    .details {
+    .opening-details {
       margin-top: 21px;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
@@ -425,7 +373,7 @@
 
     .detail {
       display: grid;
-      grid-template-columns: 67px 1fr;
+      grid-template-columns: 68px 1fr;
       gap: 16px;
       align-items: start;
       padding: 18px 4px;
@@ -435,7 +383,7 @@
     .detail:last-child { border-bottom: 0; }
 
     .detail-label {
-      color: var(--blue);
+      color: var(--cyan);
       font-size: .79rem;
       font-weight: 700;
       letter-spacing: .13em;
@@ -443,9 +391,35 @@
 
     .detail-value {
       color: #f3f8fb;
-      font-size: .97rem;
-      line-height: 1.7;
-      letter-spacing: -.02em;
+      font-size: .96rem;
+      line-height: 1.68;
+      letter-spacing: -.025em;
+    }
+
+    .garden-photo {
+      margin-top: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(174, 209, 230, .22);
+      border-radius: 18px;
+      background: #071827;
+      box-shadow: 0 16px 32px rgba(0,0,0,.22);
+    }
+
+    .garden-photo img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .garden-caption {
+      margin: 10px 0 0;
+      color: var(--dim);
+      font-size: .76rem;
+      line-height: 1.55;
+      letter-spacing: -.01em;
+      text-align: center;
     }
 
     .map-link {
@@ -483,15 +457,15 @@
     }
 
     .footer {
-      margin-top: 42px;
+      margin-top: 39px;
       text-align: center;
     }
 
     .footer img {
-      width: min(100%, 168px);
+      width: min(100%, 132px);
       height: auto;
-      opacity: .95;
-      filter: drop-shadow(0 5px 16px rgba(0,0,0,.45));
+      opacity: .90;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
     }
 
     .footer p {
@@ -503,11 +477,10 @@
 
     @media (max-width: 390px) {
       .page { padding-right: 16px; padding-left: 16px; }
-      .brand { padding-bottom: 26px; }
       .event-title { padding-right: 17px; padding-left: 17px; }
+      .metric { padding-right: 6px; padding-left: 6px; }
+      .metric-word { font-size: .68rem; }
       .intro-copy { padding-right: 18px; padding-left: 18px; }
-      .metric { padding-right: 7px; padding-left: 7px; }
-      .metric-word { font-size: .69rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -522,30 +495,27 @@
       <img src="assets/logos/watervis-white.png" alt="WATERVIS" />
     </header>
 
-    <section class="hero" aria-labelledby="invitation-title">
+    <section class="hero" aria-labelledby="hero-title">
       <p class="eyebrow">OPENING INVITATION</p>
-      <h1 id="invitation-title">
-        <span class="light">깊은 바다에서 시작되는</span><br />
-        워터비스의 새로운 여정
+      <h1 id="hero-title">
+        1032m 깊이의 가치를<br />
+        <span class="accent">새로운 형태로</span><br />
+        담아냅니다.
       </h1>
 
       <p class="event-title">파우치 워터 공장 오픈식</p>
       <p class="event-date">2026년 7월 10일 (금) 오후 2시부터</p>
-      <span class="water-mark" aria-hidden="true"></span>
+      <span class="drop" aria-hidden="true"></span>
     </section>
 
-    <section class="visual" aria-label="몸愛좋은물 Gold 파우치 워터">
-      <img class="hero-image" src="assets/images/opening-hero.jpg" alt="심해를 배경으로 한 몸愛좋은물 Gold 파우치 워터" />
+    <section class="hero-image-wrap" aria-label="몸愛좋은물 Gold 파우치 워터">
+      <img src="assets/images/opening-hero.jpg" alt="심해를 배경으로 한 몸愛좋은물 Gold 파우치 워터" />
     </section>
-
-    <div class="product-signature" aria-label="몸愛좋은물 Gold">
-      <img src="assets/logos/bodygoodwater-white.png" alt="몸愛좋은물" />
-    </div>
 
     <p class="intro-copy">
-      몸愛좋은물 Gold는 강원도 양양 원포에서 취수한<br />
-      해양심층수를 350mL 스탠드 파우치에 담은<br />
-      프리미엄 먹는해양심층수입니다.
+      워터비스가 깊은 바다의 가치를 더 가까이 전하기 위해<br />
+      파우치 워터 공장을 새롭게 엽니다.<br />
+      그 첫 순간에 함께해 주시기를 바랍니다.
     </p>
 
     <section class="section" aria-labelledby="product-heading">
@@ -596,7 +566,7 @@
         </div>
         <div class="info-row">
           <div class="info-label">포장 단위</div>
-          <div class="info-value">350mL 스탠드 파우치 · 36개 / 박스</div>
+          <div class="info-value">350mL 스탠드 파우치 · 30개 / 박스</div>
         </div>
       </div>
     </section>
@@ -634,11 +604,11 @@
       </div>
     </section>
 
-    <section class="event-section" aria-labelledby="event-heading">
+    <section class="opening-section" aria-labelledby="opening-heading">
       <p class="section-label">OPENING INFORMATION</p>
-      <h2 class="section-heading" id="event-heading">오픈식 안내</h2>
+      <h2 class="section-heading" id="opening-heading">오픈식 안내</h2>
 
-      <div class="details">
+      <div class="opening-details">
         <div class="detail">
           <div class="detail-label">일시</div>
           <div class="detail-value">2026년 7월 10일 (금) 오후 2시부터</div>
@@ -646,11 +616,16 @@
         <div class="detail">
           <div class="detail-label">장소</div>
           <div class="detail-value">
-            (주)워터비스 파우치 워터 공장 옆 가든<br />
+            (주)워터비스 파우치 공장 옆 가든<br />
             강원특별자치도 양양군 현남면 원포1길 53
           </div>
         </div>
       </div>
+
+      <figure class="garden-photo">
+        <img src="assets/images/opening-garden.jpg" alt="워터비스 파우치 공장 옆 가든 전경" />
+      </figure>
+      <p class="garden-caption">워터비스 파우치 공장 옆 가든 전경</p>
 
       <a class="map-link"
          href="https://map.naver.com/p/search/강원특별자치도%20양양군%20현남면%20원포1길%2053"
@@ -665,6 +640,7 @@
     </section>
 
     <footer class="footer">
+      <img src="assets/logos/bodygoodwater-white.png" alt="몸愛좋은물" />
       <p>WATERVIS · PREMIUM DEEP SEA WATER</p>
     </footer>
   </main>
