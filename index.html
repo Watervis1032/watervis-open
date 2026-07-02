@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#031426" />
+  <meta name="description" content="WATERVIS 파우치 워터 공장 오픈식 초대장" />
+  <title>WATERVIS | 파우치 워터 공장 오픈식</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink: #f5f7fb;
+      --muted: rgba(231, 241, 249, 0.72);
+      --line: rgba(174, 209, 230, 0.22);
+      --blue: #61c8fa;
+      --blue-deep: #031426;
+      --gold: #d6ad66;
+      --card: rgba(6, 26, 43, 0.68);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { background: #020913; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 50% -8%, rgba(52, 179, 241, 0.30), transparent 30rem),
+        radial-gradient(circle at 10% 54%, rgba(0, 124, 197, 0.12), transparent 28rem),
+        linear-gradient(180deg, #071c31 0%, #04101e 42%, #020913 100%);
+      font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .page {
+      position: relative;
+      overflow: hidden;
+      max-width: 620px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 28px 20px 42px;
+      isolation: isolate;
+    }
+
+    .page::before,
+    .page::after {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      pointer-events: none;
+    }
+
+    .page::before {
+      top: 0;
+      left: 50%;
+      width: 160%;
+      height: 430px;
+      transform: translateX(-50%);
+      opacity: 0.55;
+      background:
+        linear-gradient(105deg, transparent 37%, rgba(133, 225, 255, 0.13) 38%, transparent 48%),
+        linear-gradient(78deg, transparent 43%, rgba(133, 225, 255, 0.12) 44%, transparent 55%),
+        linear-gradient(90deg, transparent 48%, rgba(180, 240, 255, 0.12) 49%, transparent 60%);
+      filter: blur(2px);
+    }
+
+    .page::after {
+      right: -60px;
+      bottom: 180px;
+      width: 230px;
+      height: 230px;
+      border: 1px solid rgba(116, 216, 255, 0.10);
+      border-radius: 50%;
+      box-shadow:
+        -160px 92px 0 -105px rgba(116, 216, 255, 0.08),
+        -92px -22px 0 -85px rgba(116, 216, 255, 0.07);
+    }
+
+    .brand {
+      display: flex;
+      justify-content: center;
+      padding: 12px 0 36px;
+    }
+
+    .brand img {
+      display: block;
+      width: min(100%, 282px);
+      height: auto;
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
+    }
+
+    .intro {
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--blue);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
+      font-size: clamp(2.15rem, 8vw, 3.5rem);
+      font-weight: 500;
+      line-height: 1.33;
+      letter-spacing: -0.055em;
+      text-wrap: balance;
+    }
+
+    h1 .accent {
+      display: inline-block;
+      color: #a7e0fb;
+      text-shadow: 0 0 25px rgba(107, 211, 255, 0.28);
+    }
+
+    .event-title {
+      display: inline-block;
+      margin: 34px 0 0;
+      padding: 14px 24px 13px;
+      border-top: 1px solid rgba(214, 173, 102, 0.60);
+      border-bottom: 1px solid rgba(214, 173, 102, 0.60);
+      color: #ffffff;
+      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
+      font-size: clamp(1.33rem, 4.8vw, 1.8rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+
+    .event-date {
+      margin: 20px 0 0;
+      color: var(--gold);
+      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
+      font-size: clamp(1.03rem, 3.7vw, 1.24rem);
+      letter-spacing: 0.015em;
+    }
+
+    .drop {
+      display: block;
+      width: 18px;
+      height: 25px;
+      margin: 28px auto 27px;
+      border: 1px solid #9ee5ff;
+      border-radius: 60% 60% 65% 65%;
+      transform: rotate(45deg);
+      box-shadow: 0 0 18px rgba(83, 211, 255, 0.55);
+    }
+
+    .visual {
+      position: relative;
+      height: clamp(350px, 72vw, 470px);
+      overflow: hidden;
+      border: 1px solid rgba(151, 215, 245, 0.18);
+      border-radius: 24px;
+      background: #041523;
+      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.32);
+    }
+
+    .visual::before {
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      content: "";
+      background:
+        linear-gradient(180deg, rgba(3, 15, 28, 0.30) 0%, rgba(3, 15, 28, 0.02) 43%, rgba(2, 11, 21, 0.84) 100%),
+        radial-gradient(circle at 50% 20%, rgba(74, 195, 255, 0.20), transparent 36%);
+      pointer-events: none;
+    }
+
+    .visual img.hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 79%;
+      transform: scale(1.17);
+      filter: saturate(1.08) contrast(1.05);
+    }
+
+    .visual-brand {
+      position: absolute;
+      z-index: 2;
+      right: 22px;
+      bottom: 23px;
+      left: 22px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .visual-brand img {
+      width: min(100%, 230px);
+      height: auto;
+      filter: drop-shadow(0 5px 18px rgba(0, 0, 0, 0.55));
+    }
+
+    .message {
+      margin: 32px auto 0;
+      padding: 25px 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      backdrop-filter: blur(9px);
+      color: #d9ecf7;
+      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
+      font-size: 1.07rem;
+      line-height: 1.88;
+      letter-spacing: -0.025em;
+      text-align: center;
+    }
+
+    .details {
+      margin-top: 16px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .detail {
+      display: grid;
+      grid-template-columns: 68px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 19px 4px;
+      border-bottom: 1px solid rgba(174, 209, 230, 0.13);
+    }
+
+    .detail:last-child { border-bottom: 0; }
+
+    .detail-label {
+      color: var(--blue);
+      font-size: 0.79rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+    }
+
+    .detail-value {
+      color: #f3f8fb;
+      font-size: 0.97rem;
+      line-height: 1.7;
+      letter-spacing: -0.02em;
+    }
+
+    .map-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      margin-top: 24px;
+      padding: 17px 20px;
+      border: 1px solid rgba(113, 209, 249, 0.54);
+      border-radius: 999px;
+      color: #e6f7ff;
+      background: rgba(12, 67, 100, 0.42);
+      font-size: 0.98rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 160ms ease, background 160ms ease;
+    }
+
+    .map-link:hover,
+    .map-link:focus-visible {
+      background: rgba(23, 110, 157, 0.62);
+      transform: translateY(-2px);
+    }
+
+    .map-link svg {
+      width: 19px;
+      height: 19px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .footer {
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    .footer img {
+      width: min(100%, 168px);
+      height: auto;
+      opacity: 0.93;
+      filter: drop-shadow(0 5px 16px rgba(0, 0, 0, 0.45));
+    }
+
+    .footer p {
+      margin: 16px 0 0;
+      color: rgba(212, 232, 243, 0.52);
+      font-size: 0.73rem;
+      letter-spacing: 0.06em;
+    }
+
+    @media (max-width: 390px) {
+      .page { padding-right: 16px; padding-left: 16px; }
+      .brand { padding-bottom: 28px; }
+      .event-title { padding-right: 17px; padding-left: 17px; }
+      .message { padding-right: 19px; padding-left: 19px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="brand" aria-label="WATERVIS">
+      <img src="assets/logos/watervis-white.png" alt="WATERVIS" />
+    </header>
+
+    <section class="intro" aria-labelledby="invitation-title">
+      <p class="eyebrow">OPENING INVITATION</p>
+      <h1 id="invitation-title">
+        1032m 깊이의 가치를<br />
+        <span class="accent">새로운 형태로</span><br />
+        담아냅니다.
+      </h1>
+
+      <p class="event-title">파우치 워터 공장 오픈식</p>
+      <p class="event-date">2026년 7월 10일 (금) 오후 2시부터</p>
+      <span class="drop" aria-hidden="true"></span>
+    </section>
+
+    <section class="visual" aria-label="몸愛좋은물 Gold 파우치 워터">
+      <img class="hero-image" src="assets/images/opening-hero.png" alt="" />
+      <div class="visual-brand">
+        <img src="assets/logos/bodygoodwater-white.png" alt="몸愛좋은물" />
+      </div>
+    </section>
+
+    <p class="message">
+      워터비스가 깊은 바다의 가치를 더 가까이 전하기 위해<br />
+      파우치 워터 공장을 새롭게 엽니다.<br />
+      그 첫 순간에 함께해 주시기를 바랍니다.
+    </p>
+
+    <section class="details" aria-label="행사 안내">
+      <div class="detail">
+        <div class="detail-label">일시</div>
+        <div class="detail-value">2026년 7월 10일 (금) 오후 2시부터</div>
+      </div>
+      <div class="detail">
+        <div class="detail-label">장소</div>
+        <div class="detail-value">
+          워터비스 파우치 워터 공장<br />
+          강원특별자치도 양양군 현남면 원포1길 53
+        </div>
+      </div>
+    </section>
+
+    <a class="map-link"
+       href="https://map.naver.com/p/search/강원특별자치도%20양양군%20현남면%20원포1길%2053"
+       target="_blank"
+       rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 10.7c0 5.2-8 10.3-8 10.3S4 15.9 4 10.7A8 8 0 1 1 20 10.7Z"></path>
+        <circle cx="12" cy="10.7" r="2.5"></circle>
+      </svg>
+      네이버지도에서 길찾기
+    </a>
+
+    <footer class="footer">
+      <img src="assets/logos/bodygoodwater-white.png" alt="몸愛좋은물" />
+      <p>WATERVIS · PREMIUM DEEP SEA WATER</p>
+    </footer>
+  </main>
+</body>
+</html>
