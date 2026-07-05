@@ -4,38 +4,48 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#041727" />
-  <meta name="description" content="WATERVIS 파우치 워터 공장 오픈식 초대장" />
+  <meta
+    name="description"
+    content="WATERVIS 파우치 워터 공장 오픈식 초대장"
+  />
   <title>WATERVIS | 파우치 워터 공장 오픈식</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     :root {
       --navy: #03131f;
-      --navy-2: #061f34;
       --ink: #f5fbff;
-      --muted: rgba(226, 241, 249, .74);
-      --dim: rgba(219, 236, 245, .54);
+      --muted: rgba(226, 241, 249, 0.74);
+      --dim: rgba(219, 236, 245, 0.54);
       --cyan: #72d5ff;
       --cyan-soft: #b7ebff;
       --gold: #d7ad68;
-      --line: rgba(157, 214, 241, .20);
-      --panel: rgba(7, 30, 49, .76);
+      --line: rgba(157, 214, 241, 0.2);
+      --panel: rgba(7, 30, 49, 0.76);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { background: #020a12; }
+    html {
+      background: #020a12;
+    }
 
     body {
-      margin: 0;
       min-width: 320px;
+      margin: 0;
+      overflow-x: hidden;
       color: var(--ink);
       background:
-        radial-gradient(circle at 50% -12%, rgba(54, 177, 231, .34), transparent 31rem),
-        radial-gradient(circle at 100% 41%, rgba(19, 103, 153, .14), transparent 26rem),
+        radial-gradient(circle at 50% -12%, rgba(54, 177, 231, 0.34), transparent 31rem),
+        radial-gradient(circle at 100% 41%, rgba(19, 103, 153, 0.14), transparent 26rem),
         linear-gradient(180deg, #08233a 0%, #031422 44%, #020a12 100%);
       font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
@@ -59,11 +69,11 @@
       height: 510px;
       content: "";
       transform: translateX(-50%);
-      opacity: .56;
+      opacity: 0.56;
       background:
-        linear-gradient(101deg, transparent 37%, rgba(152, 229, 255, .14) 38%, transparent 50%),
-        linear-gradient(79deg, transparent 42%, rgba(152, 229, 255, .12) 43%, transparent 56%),
-        linear-gradient(92deg, transparent 49%, rgba(215, 248, 255, .10) 50%, transparent 62%);
+        linear-gradient(101deg, transparent 37%, rgba(152, 229, 255, 0.14) 38%, transparent 50%),
+        linear-gradient(79deg, transparent 42%, rgba(152, 229, 255, 0.12) 43%, transparent 56%),
+        linear-gradient(92deg, transparent 49%, rgba(215, 248, 255, 0.1) 50%, transparent 62%);
       filter: blur(2px);
       pointer-events: none;
     }
@@ -77,7 +87,7 @@
     .brand img {
       width: min(100%, 286px);
       height: auto;
-      filter: drop-shadow(0 8px 22px rgba(0, 0, 0, .38));
+      filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.38));
     }
 
     .hero {
@@ -88,14 +98,15 @@
     .section-label {
       margin: 0;
       color: var(--cyan);
-      font-size: .7rem;
+      font-size: 0.7rem;
       font-weight: 700;
-      letter-spacing: .22em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
     }
 
     h1,
     h2,
+    h3,
     p {
       margin-top: 0;
     }
@@ -103,35 +114,39 @@
     h1 {
       margin: 14px 0 0;
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(1.67rem, 7.1vw, 2.95rem);
+      font-size: clamp(1.58rem, 7vw, 3.1rem);
       font-weight: 500;
-      line-height: 1.36;
-      letter-spacing: -.067em;
-      white-space: nowrap;
+      line-height: 1.34;
+      letter-spacing: -0.067em;
+      word-break: keep-all;
+    }
+
+    .hero-depth,
+    .hero-line {
+      display: block;
     }
 
     .hero-depth {
       color: #f5fbff;
-      font-size: .80em;
-      letter-spacing: -.035em;
+      font-size: 0.78em;
+      letter-spacing: -0.035em;
     }
 
-    h1 .accent {
-      display: inline-block;
+    .accent {
       color: #a9e4ff;
-      text-shadow: 0 0 25px rgba(102, 212, 255, .28);
+      text-shadow: 0 0 25px rgba(102, 212, 255, 0.28);
     }
 
     .event-title {
       display: inline-block;
       margin: 30px 0 0;
       padding: 13px 22px 12px;
-      border-top: 1px solid rgba(215, 173, 104, .63);
-      border-bottom: 1px solid rgba(215, 173, 104, .63);
+      border-top: 1px solid rgba(215, 173, 104, 0.63);
+      border-bottom: 1px solid rgba(215, 173, 104, 0.63);
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
       font-size: clamp(1.28rem, 4.7vw, 1.75rem);
       font-weight: 500;
-      letter-spacing: -.04em;
+      letter-spacing: -0.04em;
     }
 
     .event-date {
@@ -139,7 +154,7 @@
       color: var(--gold);
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
       font-size: clamp(1.05rem, 3.9vw, 1.26rem);
-      letter-spacing: .01em;
+      letter-spacing: 0.01em;
     }
 
     .drop {
@@ -150,30 +165,23 @@
       border: 1px solid #a8e8ff;
       border-radius: 67% 67% 72% 72%;
       transform: rotate(45deg);
-      box-shadow: 0 0 18px rgba(83, 211, 255, .55);
+      box-shadow: 0 0 18px rgba(83, 211, 255, 0.55);
     }
 
-    /*
-      모델 이미지의 상단 문구가 보이지 않도록 세로 이미지를 아래쪽 기준으로 크롭합니다.
-      파일 경로: assets/images/opening-model.jpg
-    */
+    /* 원본 이미지 비율을 유지하여 상·하단이 잘리지 않습니다. */
     .model-photo {
-      position: relative;
       margin: 0;
       overflow: hidden;
-      aspect-ratio: 9 / 10;
-      border: 1px solid rgba(151, 215, 245, .20);
+      border: 1px solid rgba(151, 215, 245, 0.2);
       border-radius: 24px;
       background: #e9f7ff;
-      box-shadow: 0 28px 60px rgba(0, 0, 0, .34);
+      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.34);
     }
 
     .model-photo img {
       display: block;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center bottom;
+      height: auto;
     }
 
     .intro-copy {
@@ -186,7 +194,7 @@
       font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
       font-size: 1.04rem;
       line-height: 1.87;
-      letter-spacing: -.028em;
+      letter-spacing: -0.028em;
       text-align: center;
       backdrop-filter: blur(9px);
     }
@@ -201,7 +209,7 @@
       font-size: clamp(1.78rem, 6vw, 2.28rem);
       font-weight: 500;
       line-height: 1.38;
-      letter-spacing: -.06em;
+      letter-spacing: -0.06em;
     }
 
     .opening-details {
@@ -216,7 +224,7 @@
       gap: 18px;
       align-items: start;
       padding: 22px 4px;
-      border-bottom: 1px solid rgba(174, 209, 230, .14);
+      border-bottom: 1px solid rgba(174, 209, 230, 0.14);
     }
 
     .detail:last-child {
@@ -226,9 +234,9 @@
     .detail-label {
       padding-top: 3px;
       color: var(--cyan);
-      font-size: clamp(.92rem, 3.7vw, 1.02rem);
+      font-size: clamp(0.92rem, 3.7vw, 1.02rem);
       font-weight: 700;
-      letter-spacing: .13em;
+      letter-spacing: 0.13em;
     }
 
     .detail-value {
@@ -237,17 +245,17 @@
       font-size: clamp(1.12rem, 4.4vw, 1.32rem);
       font-weight: 500;
       line-height: 1.75;
-      letter-spacing: -.025em;
+      letter-spacing: -0.025em;
       word-break: keep-all;
     }
 
     .garden-photo {
       margin: 26px 0 0;
       overflow: hidden;
-      border: 1px solid rgba(174, 209, 230, .22);
+      border: 1px solid rgba(174, 209, 230, 0.22);
       border-radius: 18px;
       background: #071827;
-      box-shadow: 0 16px 32px rgba(0, 0, 0, .22);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22);
     }
 
     .garden-photo img {
@@ -261,9 +269,9 @@
     .garden-caption {
       margin: 10px 0 0;
       color: var(--dim);
-      font-size: .77rem;
+      font-size: 0.77rem;
       line-height: 1.55;
-      letter-spacing: -.01em;
+      letter-spacing: -0.01em;
       text-align: center;
     }
 
@@ -275,10 +283,10 @@
       width: 100%;
       margin-top: 24px;
       padding: 18px 20px;
-      border: 1px solid rgba(113, 209, 249, .56);
+      border: 1px solid rgba(113, 209, 249, 0.56);
       border-radius: 999px;
       color: #e6f7ff;
-      background: rgba(12, 67, 100, .44);
+      background: rgba(12, 67, 100, 0.44);
       font-size: 1rem;
       font-weight: 600;
       text-decoration: none;
@@ -287,7 +295,7 @@
 
     .map-link:hover,
     .map-link:focus-visible {
-      background: rgba(23, 110, 157, .62);
+      background: rgba(23, 110, 157, 0.62);
       transform: translateY(-2px);
     }
 
@@ -301,24 +309,6 @@
       stroke-linejoin: round;
     }
 
-    .master-brand-signature {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 34px;
-      padding: 19px;
-      border: 1px solid rgba(175, 219, 241, .35);
-      border-radius: 18px;
-      background:
-        linear-gradient(135deg, rgba(245, 252, 255, .98), rgba(224, 244, 255, .97));
-      box-shadow: 0 16px 32px rgba(0, 0, 0, .16);
-    }
-
-    .master-brand-signature img {
-      width: min(100%, 106px);
-      height: auto;
-    }
-
     .footer {
       margin-top: 38px;
       text-align: center;
@@ -327,15 +317,15 @@
     .footer img {
       width: min(100%, 132px);
       height: auto;
-      opacity: .90;
-      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, .35));
+      opacity: 0.9;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
     }
 
     .footer p {
       margin: 15px 0 0;
-      color: rgba(212, 232, 243, .52);
-      font-size: .71rem;
-      letter-spacing: .06em;
+      color: rgba(212, 232, 243, 0.52);
+      font-size: 0.71rem;
+      letter-spacing: 0.06em;
     }
 
     @media (max-width: 390px) {
@@ -379,9 +369,9 @@
       <p class="eyebrow">OPENING INVITATION</p>
 
       <h1 id="hero-title">
-        <span class="hero-depth">1032m</span><br />
-        깊은 바다에서 시작되는<br />
-        <span class="accent">워터비스의 새로운 여정</span>
+        <span class="hero-depth">1032m</span>
+        <span class="hero-line">깊은 바다에서 시작되는</span>
+        <span class="hero-line accent">워터비스의 새로운 여정</span>
       </h1>
 
       <p class="event-title">파우치 워터 공장 오픈식</p>
@@ -427,6 +417,7 @@
           alt="워터비스 파우치 공장 옆 가든 전경"
         />
       </figure>
+
       <p class="garden-caption">워터비스 파우치 공장 옆 가든 전경</p>
 
       <a
@@ -441,13 +432,6 @@
         </svg>
         네이버지도에서 길찾기
       </a>
-
-      <div class="master-brand-signature">
-        <img
-          src="assets/logos/master-brand-mark.png"
-          alt="깊은 바다 1032m"
-        />
-      </div>
     </section>
 
     <footer class="footer">
