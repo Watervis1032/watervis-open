@@ -3,25 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>몸愛좋은물 Gold | 1032m 깊이를 담은 파우치 워터</title>
 
-  <meta name="description" content="몸愛좋은물 Gold는 강원도 양양 원포 해역 수심 1,032m에서 취수한 해양심층수를 350mL 파우치 형태로 담은 프리미엄 먹는해양심층수입니다." />
+  <title>몸愛좋은물 Gold | 새로운 파우치 워터의 시작</title>
+
+  <meta
+    name="description"
+    content="몸愛좋은물 Gold는 1032m 깊이의 가치를 350mL 캡형 파우치에 담은 프리미엄 해양심층수 파우치 워터입니다."
+  />
 
   <meta property="og:title" content="몸愛좋은물 Gold" />
-  <meta property="og:description" content="1032m 깊이를 담은 새로운 파우치 워터" />
+  <meta property="og:description" content="1032m DEEP SEA WATER, 새로운 파우치 워터의 시작" />
   <meta property="og:image" content="assets/images/gold-hero-product.png" />
   <meta property="og:type" content="website" />
 
   <style>
     :root {
       --navy: #031426;
-      --deep: #061d35;
-      --blue: #0b79c9;
+      --navy-2: #061d35;
       --gold: #d8aa45;
+      --gold-light: #f5cf72;
       --text: #f7fbff;
       --muted: #b9c7d6;
       --line: rgba(255, 255, 255, 0.14);
       --card: rgba(255, 255, 255, 0.07);
+      --card-strong: rgba(255, 255, 255, 0.1);
     }
 
     * {
@@ -38,7 +43,14 @@
         radial-gradient(circle at top, rgba(24, 108, 174, 0.28), transparent 36rem),
         linear-gradient(180deg, #031426 0%, #020a14 100%);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Pretendard", "Segoe UI", sans-serif;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Apple SD Gothic Neo",
+        "Noto Sans KR",
+        "Pretendard",
+        "Segoe UI",
+        sans-serif;
       word-break: keep-all;
     }
 
@@ -50,10 +62,14 @@
     .page {
       width: 100%;
       max-width: 520px;
-      margin: 0 auto;
-      background: linear-gradient(180deg, rgba(4, 20, 38, 0.95), rgba(2, 10, 20, 0.98));
       min-height: 100vh;
+      margin: 0 auto;
       overflow: hidden;
+      background: linear-gradient(
+        180deg,
+        rgba(4, 20, 38, 0.97),
+        rgba(2, 10, 20, 0.99)
+      );
     }
 
     .topbar {
@@ -63,8 +79,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 14px;
       padding: 14px 18px;
-      background: rgba(3, 14, 27, 0.76);
+      background: rgba(3, 14, 27, 0.8);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
@@ -73,97 +90,133 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      min-width: 0;
     }
 
     .brand img {
+      display: block;
       height: 28px;
       width: auto;
-      display: block;
     }
 
     .brand-text {
       font-size: 13px;
       color: var(--muted);
       letter-spacing: 0.02em;
+      white-space: nowrap;
     }
 
     .nav-link {
-      font-size: 13px;
-      color: var(--gold);
-      border: 1px solid rgba(216, 170, 69, 0.42);
-      padding: 8px 11px;
+      flex: 0 0 auto;
+      padding: 8px 12px;
       border-radius: 999px;
+      border: 1px solid rgba(216, 170, 69, 0.48);
+      background: rgba(216, 170, 69, 0.08);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
     .hero {
-      position: relative;
-      padding-bottom: 26px;
+      padding: 42px 0 34px;
     }
 
-    .hero-image {
-      width: 100%;
-      display: block;
-    }
-
-    .hero-caption {
-      padding: 24px 22px 10px;
+    .hero-copy {
+      padding: 0 22px 28px;
       text-align: center;
     }
 
-    .eyebrow {
-      margin: 0 0 10px;
-      color: var(--gold);
-      font-size: 12px;
-      letter-spacing: 0.22em;
-      font-weight: 700;
+    .launch-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 28px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(216, 170, 69, 0.72);
+      background:
+        radial-gradient(circle at top, rgba(245, 207, 114, 0.24), rgba(216, 170, 69, 0.08)),
+        rgba(255, 255, 255, 0.03);
+      color: var(--gold-light);
+      font-size: 20px;
+      font-weight: 950;
+      letter-spacing: -0.01em;
+      box-shadow:
+        0 0 28px rgba(216, 170, 69, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
     }
 
     h1 {
       margin: 0;
-      font-size: 34px;
-      line-height: 1.15;
-      font-weight: 800;
-      letter-spacing: -0.04em;
+      font-size: 31px;
+      line-height: 1.3;
+      font-weight: 900;
+      letter-spacing: -0.055em;
     }
 
-    .hero-caption p {
-      margin: 14px auto 0;
-      max-width: 360px;
+    .hero-copy .eng {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--gold-light);
+      font-size: 17px;
+      line-height: 1.25;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-copy p {
+      max-width: 370px;
+      margin: 22px auto 0;
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.65;
+      line-height: 1.75;
+    }
+
+    .hero-image-wrap {
+      padding: 0 22px;
+    }
+
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.48);
+      background: rgba(255, 255, 255, 0.04);
     }
 
     .cta-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      padding: 18px 22px 0;
+      gap: 12px;
+      padding: 24px 22px 0;
     }
 
     .btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 46px;
+      min-height: 48px;
       border-radius: 999px;
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 900;
+      text-align: center;
     }
 
     .btn.primary {
-      background: linear-gradient(135deg, #e2bd61, #b98625);
+      background: linear-gradient(135deg, #e7c86a, #b98625);
       color: #07101a;
     }
 
     .btn.secondary {
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.24);
       background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
     }
 
     section {
-      padding: 42px 22px;
+      padding: 44px 22px;
       border-top: 1px solid var(--line);
     }
 
@@ -172,58 +225,62 @@
     }
 
     .section-title .num {
+      margin-bottom: 9px;
       color: var(--gold);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 950;
       letter-spacing: 0.16em;
-      margin-bottom: 8px;
     }
 
     h2 {
       margin: 0;
       font-size: 28px;
-      line-height: 1.25;
-      letter-spacing: -0.04em;
+      line-height: 1.28;
+      font-weight: 900;
+      letter-spacing: -0.045em;
     }
 
     .lead {
-      margin: 14px 0 0;
+      margin: 15px 0 0;
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.75;
-    }
-
-    .photo {
-      width: 100%;
-      display: block;
-      border-radius: 26px;
-      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.42);
-      border: 1px solid rgba(255, 255, 255, 0.13);
+      line-height: 1.78;
     }
 
     .image-card {
       margin-top: 24px;
     }
 
+    .photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.42);
+    }
+
     .spec-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
-      margin-top: 22px;
+      margin-top: 24px;
     }
 
     .spec {
+      min-height: 92px;
       padding: 16px 15px;
-      background: var(--card);
-      border: 1px solid var(--line);
       border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--card);
     }
 
     .spec small {
       display: block;
+      margin-bottom: 8px;
       color: var(--muted);
       font-size: 12px;
-      margin-bottom: 8px;
+      line-height: 1.35;
     }
 
     .spec strong {
@@ -234,56 +291,65 @@
     }
 
     .spec strong.gold {
-      color: var(--gold);
+      color: var(--gold-light);
     }
 
     .feature-list {
       display: grid;
       gap: 12px;
-      margin-top: 22px;
+      margin-top: 24px;
     }
 
     .feature {
       display: grid;
-      grid-template-columns: 38px 1fr;
-      gap: 12px;
+      grid-template-columns: 40px 1fr;
+      gap: 13px;
       align-items: start;
-      padding: 16px;
-      background: var(--card);
-      border: 1px solid var(--line);
+      padding: 17px;
       border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--card);
     }
 
     .icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
+      width: 40px;
+      height: 40px;
       display: grid;
       place-items: center;
-      color: var(--gold);
+      border-radius: 50%;
       border: 1px solid rgba(216, 170, 69, 0.45);
-      font-weight: 800;
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 950;
     }
 
     .feature h3 {
-      margin: 0 0 5px;
+      margin: 0 0 6px;
       font-size: 17px;
+      line-height: 1.35;
     }
 
     .feature p {
       margin: 0;
       color: var(--muted);
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .quality-box {
-      margin-top: 22px;
+      margin-top: 24px;
       padding: 22px;
       border-radius: 22px;
+      border: 1px solid rgba(61, 169, 255, 0.28);
       background:
         linear-gradient(135deg, rgba(15, 109, 181, 0.18), rgba(255, 255, 255, 0.04));
-      border: 1px solid rgba(61, 169, 255, 0.28);
+    }
+
+    .quality-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.78;
     }
 
     .quality-box strong {
@@ -291,36 +357,38 @@
     }
 
     .contact {
+      padding-bottom: 56px;
       text-align: center;
-      padding-bottom: 54px;
     }
 
     .contact-card {
-      margin-top: 22px;
+      margin-top: 24px;
       padding: 24px 18px;
       border-radius: 24px;
-      background: rgba(255, 255, 255, 0.07);
       border: 1px solid var(--line);
+      background: var(--card-strong);
+      text-align: left;
     }
 
     .contact-card p {
-      margin: 8px 0;
+      margin: 9px 0;
       color: var(--muted);
       font-size: 15px;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     .contact-card strong {
       color: var(--text);
+      margin-right: 6px;
     }
 
     .footer-logo {
       display: flex;
+      align-items: center;
       justify-content: center;
       gap: 18px;
-      align-items: center;
-      margin-top: 24px;
-      opacity: 0.9;
+      margin-top: 26px;
+      opacity: 0.92;
     }
 
     .footer-logo img {
@@ -329,10 +397,10 @@
     }
 
     .notice {
-      margin-top: 20px;
-      color: rgba(255,255,255,0.45);
+      margin: 20px 0 0;
+      color: rgba(255, 255, 255, 0.45);
       font-size: 12px;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     @media (min-width: 760px) {
@@ -345,6 +413,39 @@
         box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
       }
     }
+
+    @media (max-width: 390px) {
+      .brand-text {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .launch-badge {
+        margin-bottom: 24px;
+        padding: 11px 20px;
+        font-size: 19px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .hero-copy .eng {
+        font-size: 15px;
+        margin-bottom: 16px;
+      }
+
+      .hero-copy p {
+        font-size: 15px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+    }
   </style>
 </head>
 
@@ -354,25 +455,33 @@
     <header class="topbar">
       <a class="brand" href="#">
         <img src="assets/logos/bodygoodwater-white.png" alt="몸愛좋은물 로고" />
-        <span class="brand-text">Premium Deep Sea Water</span>
+        <span class="brand-text">Gold New Launch</span>
       </a>
-      <a class="nav-link" href="#contact">문의하기</a>
+
+      <a class="nav-link" href="#product">제품 보기</a>
     </header>
 
     <section class="hero" aria-label="몸愛좋은물 Gold 신제품 소개">
-      <img
-        class="hero-image"
-        src="assets/images/gold-hero-product.png"
-        alt="몸愛좋은물 Gold 신제품 파우치 워터"
-      />
+      <div class="hero-copy">
+        <p class="launch-badge">✨ 신제품 출시</p>
 
-      <div class="hero-caption">
-        <p class="eyebrow">NEW PRODUCT</p>
-        <h1>몸愛좋은물 Gold</h1>
+        <h1>
+          <span class="eng">1032m DEEP SEA WATER</span>
+          새로운 파우치 워터의 시작
+        </h1>
+
         <p>
-          1032m 깊이의 가치를 담은<br>
-          새로운 파우치 워터를 소개합니다.
+          몸愛좋은물 Gold, 1032m 깊이의 가치를<br>
+          350mL 캡형 파우치에 담았습니다.
         </p>
+      </div>
+
+      <div class="hero-image-wrap">
+        <img
+          class="hero-image"
+          src="assets/images/gold-hero-product.png"
+          alt="몸愛좋은물 Gold 신제품 파우치 워터"
+        />
       </div>
 
       <div class="cta-row">
@@ -434,30 +543,37 @@
           <small>제품명</small>
           <strong>몸愛좋은물 Gold</strong>
         </div>
+
         <div class="spec">
           <small>식품유형</small>
           <strong>먹는해양심층수</strong>
         </div>
+
         <div class="spec">
           <small>내용량</small>
           <strong class="gold">350mL</strong>
         </div>
+
         <div class="spec">
           <small>취수 수심</small>
           <strong class="gold">1,032m</strong>
         </div>
+
         <div class="spec">
           <small>취수 해역</small>
           <strong>강원도 양양 원포</strong>
         </div>
+
         <div class="spec">
           <small>경도</small>
           <strong class="gold">300mg/L</strong>
         </div>
+
         <div class="spec">
           <small>포장단위</small>
           <strong class="gold">36개 / 박스</strong>
         </div>
+
         <div class="spec">
           <small>권장소비자가</small>
           <strong>&nbsp;</strong>
@@ -480,7 +596,10 @@
           <div class="icon">01</div>
           <div>
             <h3>가볍고 휴대하기 쉬운 구조</h3>
-            <p>350mL 캡형 파우치로 이동, 운동, 업무, 여행 등 다양한 순간에 간편하게 휴대할 수 있습니다.</p>
+            <p>
+              350mL 캡형 파우치로 이동, 운동, 업무, 여행 등 다양한 순간에
+              간편하게 휴대할 수 있습니다.
+            </p>
           </div>
         </div>
 
@@ -488,7 +607,10 @@
           <div class="icon">02</div>
           <div>
             <h3>넓은 전면의 브랜드 경험</h3>
-            <p>블랙 파우치 전면에 깊은 바다의 이미지를 담아 프리미엄 브랜드 인상을 전달합니다.</p>
+            <p>
+              블랙 파우치 전면에 깊은 바다의 이미지를 담아
+              프리미엄 브랜드 인상을 전달합니다.
+            </p>
           </div>
         </div>
 
@@ -496,7 +618,10 @@
           <div class="icon">03</div>
           <div>
             <h3>보관과 진열을 고려한 패키지</h3>
-            <p>세워서 보관할 수 있는 형태로 소비자 경험과 유통 편의성을 함께 고려했습니다.</p>
+            <p>
+              세워서 보관할 수 있는 형태로 소비자 경험과
+              유통 편의성을 함께 고려했습니다.
+            </p>
           </div>
         </div>
       </div>
