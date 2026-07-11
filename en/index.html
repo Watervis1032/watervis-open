@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>MOMAEJOEUNMUL Gold | A New Era of Pouch Water</title>
+
+  <meta
+    name="description"
+    content="MOMAEJOEUNMUL Gold is premium deep ocean water sourced at a depth of 1,032 meters and packaged in a convenient 350 mL capped pouch."
+  />
+
+  <meta property="og:title" content="MOMAEJOEUNMUL Gold" />
+  <meta property="og:description" content="1,032m DEEP OCEAN WATER — A New Era of Pouch Water" />
+  <meta property="og:image" content="https://pouch.watervis.co.kr/assets/images/gold-hero-product.png" />
+  <meta property="og:url" content="https://pouch.watervis.co.kr/en/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <link rel="canonical" href="https://pouch.watervis.co.kr/en/" />
+  <link rel="alternate" hreflang="ko" href="https://pouch.watervis.co.kr/" />
+  <link rel="alternate" hreflang="en" href="https://pouch.watervis.co.kr/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://pouch.watervis.co.kr/" />
+
+  <style>
+    :root {
+      --navy: #031426;
+      --navy-2: #061d35;
+      --gold: #d8aa45;
+      --gold-light: #f5cf72;
+      --text: #f7fbff;
+      --muted: #b9c7d6;
+      --line: rgba(255, 255, 255, 0.14);
+      --card: rgba(255, 255, 255, 0.07);
+      --card-strong: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top, rgba(24, 108, 174, 0.28), transparent 36rem),
+        linear-gradient(180deg, #031426 0%, #020a14 100%);
+      color: var(--text);
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      word-break: normal;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 520px;
+      min-height: 100vh;
+      margin: 0 auto;
+      overflow: hidden;
+      background: linear-gradient(
+        180deg,
+        rgba(4, 20, 38, 0.97),
+        rgba(2, 10, 20, 0.99)
+      );
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 18px;
+      background: rgba(3, 14, 27, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brand img {
+      display: block;
+      height: 25px;
+      width: auto;
+      max-width: 150px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 0 0 auto;
+    }
+
+    .nav-link {
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(216, 170, 69, 0.48);
+      background: rgba(216, 170, 69, 0.08);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .lang-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 38px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+
+    .product-brand-logo {
+      display: block;
+      width: min(78%, 255px);
+      height: auto;
+      margin: 0 auto 24px;
+      object-fit: contain;
+    }
+
+    .hero {
+      padding: 46px 0 36px;
+    }
+
+    .hero-copy {
+      padding: 0 22px 30px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 31px;
+      line-height: 1.24;
+      font-weight: 900;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-copy .eng {
+      display: block;
+      margin-bottom: 22px;
+      color: var(--gold-light);
+      font-size: 17px;
+      line-height: 1.25;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-copy p {
+      max-width: 370px;
+      margin: 24px auto 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.78;
+    }
+
+    .hero-image-wrap {
+      padding: 0 22px;
+    }
+
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.48);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .cta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 24px 22px 0;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, #e7c86a, #b98625);
+      color: #07101a;
+    }
+
+    .btn.secondary {
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+    }
+
+    section {
+      padding: 44px 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-title {
+      margin-bottom: 22px;
+    }
+
+    .section-title .num {
+      margin-bottom: 9px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: 0.16em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.24;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      margin: 15px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.78;
+    }
+
+    .image-card {
+      margin-top: 24px;
+    }
+
+    .photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.42);
+    }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .spec {
+      min-height: 92px;
+      padding: 16px 15px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+
+    .spec small {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .spec strong {
+      display: block;
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .spec strong.gold {
+      color: var(--gold-light);
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .feature {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 13px;
+      align-items: start;
+      padding: 17px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid rgba(216, 170, 69, 0.45);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 950;
+    }
+
+    .feature h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .quality-box {
+      margin-top: 24px;
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid rgba(61, 169, 255, 0.28);
+      background:
+        linear-gradient(135deg, rgba(15, 109, 181, 0.18), rgba(255, 255, 255, 0.04));
+    }
+
+    .quality-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.78;
+    }
+
+    .quality-box strong {
+      color: #58c6ff;
+    }
+
+    .contact {
+      padding-bottom: 56px;
+      text-align: center;
+    }
+
+    .contact-card {
+      margin-top: 24px;
+      padding: 24px 18px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: var(--card-strong);
+      text-align: left;
+    }
+
+    .contact-card p {
+      margin: 9px 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .contact-card strong {
+      color: var(--text);
+      margin-right: 6px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 26px;
+      opacity: 0.92;
+    }
+
+    .footer-logo img {
+      max-height: 34px;
+      width: auto;
+    }
+
+    .notice {
+      margin: 20px 0 0;
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    @media (min-width: 760px) {
+      body {
+        padding: 28px 0;
+      }
+
+      .page {
+        border-radius: 32px;
+        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+      }
+    }
+
+    @media (max-width: 390px) {
+      .brand-text {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .hero-copy .eng {
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+
+      .hero-copy p {
+        font-size: 15px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+    }
+  
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="topbar">
+      <a class="brand" href="https://www.watervis.co.kr/en/" aria-label="Visit the WATERVIS corporate website">
+        <img src="../assets/logos/watervis-white.png" alt="WATERVIS" />
+        <span class="brand-text">Deep Ocean Mineral Water</span>
+      </a>
+
+      <div class="top-actions">
+        <a class="nav-link" href="#product">View Product</a>
+        <a class="lang-link" href="../" lang="ko" hreflang="ko" aria-label="View the Korean page">KO</a>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="MOMAEJOEUNMUL Gold pouch water">
+      <div class="hero-copy">
+        <img
+          class="product-brand-logo"
+          src="../assets/logos/bodygoodwater-white.png"
+          alt="MOMAEJOEUNMUL"
+        />
+
+        <h1>
+          <span class="eng">1,032m DEEP OCEAN WATER</span>
+          A New Era of Pouch Water
+        </h1>
+
+        <p>
+          MOMAEJOEUNMUL Gold brings the value of water sourced<br>
+          at a depth of 1,032 meters into a 350 mL capped pouch.
+        </p>
+      </div>
+
+      <div class="hero-image-wrap">
+        <img
+          class="hero-image"
+          src="../assets/images/gold-hero-product.png"
+          alt="MOMAEJOEUNMUL Gold premium pouch water"
+        />
+      </div>
+
+      <div class="cta-row">
+        <a class="btn primary" href="#product">View Product</a>
+        <a class="btn secondary" href="#contact">Business Inquiry</a>
+      </div>
+    </section>
+
+    <section id="lifestyle">
+      <div class="section-title">
+        <div class="num">01 LIFESTYLE</div>
+        <h2>Deep-Ocean Value,<br>Closer to Everyday Life</h2>
+        <p class="lead">
+          A lightweight 350 mL pouch designed to go wherever your day takes you.
+          MOMAEJOEUNMUL Gold makes premium deep ocean water easier to enjoy in everyday moments.
+        </p>
+      </div>
+
+      <div class="image-card">
+        <img
+          class="photo"
+          src="../assets/images/gold-lifestyle-sea.png"
+          alt="Lifestyle scene featuring MOMAEJOEUNMUL Gold by the sea"
+        />
+      </div>
+    </section>
+
+    <section id="wellness">
+      <div class="section-title">
+        <div class="num">02 WELLNESS ROUTINE</div>
+        <h2>A Mineral Choice<br>for Your Daily Routine</h2>
+        <p class="lead">
+          A mineral balance based on a hardness level of 300 mg/L.
+          The mineral character of deep ocean water is brought closer to people who care about their daily well-being.
+        </p>
+      </div>
+
+      <div class="image-card">
+        <img
+          class="photo"
+          src="../assets/images/gold-wellness-morning.png"
+          alt="Morning wellness routine with MOMAEJOEUNMUL Gold"
+        />
+      </div>
+    </section>
+
+    <section id="product">
+      <div class="section-title">
+        <div class="num">03 PRODUCT SPEC</div>
+        <h2>Product at a Glance</h2>
+        <p class="lead">
+          Deep ocean water sourced at a depth of 1,032 meters off Wonpo, Yangyang,
+          is packaged in a convenient 350 mL capped pouch.
+        </p>
+      </div>
+
+      <div class="spec-grid">
+        <div class="spec">
+          <small>Product Name</small>
+          <strong>MOMAEJOEUNMUL Gold</strong>
+        </div>
+
+        <div class="spec">
+          <small>Product Type</small>
+          <strong>Drinking Deep Ocean Water</strong>
+        </div>
+
+        <div class="spec">
+          <small>Net Volume</small>
+          <strong class="gold">350 mL</strong>
+        </div>
+
+        <div class="spec">
+          <small>Intake Depth</small>
+          <strong class="gold">1,032 m</strong>
+        </div>
+
+        <div class="spec">
+          <small>Source Area</small>
+          <strong>Wonpo, Yangyang, Korea</strong>
+        </div>
+
+        <div class="spec">
+          <small>Hardness</small>
+          <strong class="gold">300 mg/L</strong>
+        </div>
+
+        <div class="spec">
+          <small>Pack Size</small>
+          <strong class="gold">36 pouches / carton</strong>
+        </div>
+
+        <div class="spec">
+          <small>Suggested Retail Price</small>
+          <strong>&nbsp;</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="section-title">
+        <div class="num">04 WHY POUCH</div>
+        <h2>Why a Pouch?</h2>
+        <p class="lead">
+          It is not simply an alternative to a bottle.
+          It is a new format designed to deliver the value of deep ocean water in a lighter, more accessible way.
+        </p>
+      </div>
+
+      <div class="feature-list">
+        <div class="feature">
+          <div class="icon">01</div>
+          <div>
+            <h3>Lightweight and Easy to Carry</h3>
+            <p>
+              The 350 mL capped pouch is convenient for travel, exercise, work,
+              and many other moments throughout the day.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="icon">02</div>
+          <div>
+            <h3>A Strong Brand Presence</h3>
+            <p>
+              The broad front surface presents a deep-ocean visual identity
+              and creates a distinctive premium impression.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="icon">03</div>
+          <div>
+            <h3>Designed for Storage and Display</h3>
+            <p>
+              Its stand-up format supports convenient storage and display
+              while enhancing both consumer experience and distribution efficiency.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quality">
+      <div class="section-title">
+        <div class="num">05 QUALITY</div>
+        <h2>Quality Begins<br>with Verifiable Water Standards</h2>
+        <p class="lead">
+          WATERVIS deep ocean water is regularly tested for general water quality,
+          nutrients, major elements, and substances with potential health effects.
+        </p>
+      </div>
+
+      <div class="quality-box">
+        <p>
+          Built on the purity and mineral characteristics of
+          <strong>deep ocean water sourced at 1,032 meters</strong>,
+          MOMAEJOEUNMUL Gold offers a premium pouch-water experience for everyday life.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="section-title">
+        <div class="num">CONTACT</div>
+        <h2>Business Partnership Inquiries</h2>
+        <p class="lead">
+          We welcome inquiries regarding distribution, bulk supply, OEM/ODM, and export partnerships.
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <p><strong>Company</strong> WATERVIS Co., Ltd.</p>
+        <p><strong>Tel.</strong> <a href="tel:+82336721032">+82-33-672-1032</a></p>
+        <p><strong>Email</strong> <a href="mailto:wa1032@naver.com">wa1032@naver.com</a></p>
+        <p><strong>Address</strong> 53, Wonpo 1-gil, Hyeonnam-myeon, Yangyang-gun, Gangwon State, Republic of Korea</p>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn primary" href="tel:+82336721032">Call Us</a>
+        <a class="btn secondary" href="mailto:wa1032@naver.com">Email Us</a>
+      </div>
+
+      <div class="footer-logo">
+        <img src="../assets/logos/bodygoodwater-white.png" alt="MOMAEJOEUNMUL" />
+        <img src="../assets/logos/watervis-white.png" alt="WATERVIS" />
+      </div>
+
+      <p class="notice">
+        This page introduces MOMAEJOEUNMUL Gold and provides information for business partnerships.
+      </p>
+    </section>
+
+  </main>
+</body>
+</html>
