@@ -3,640 +3,651 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#041727" />
-  <meta name="description" content="WATERVIS 파우치 워터 공장 오픈식 초대장" />
-  <title>WATERVIS | 파우치 워터 공장 오픈식</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet" />
+  <title>몸愛좋은물 Gold | 새로운 파우치 워터의 시작</title>
+
+  <meta
+    name="description"
+    content="몸愛좋은물 Gold는 1032m 깊이의 가치를 350mL 캡형 파우치에 담은 프리미엄 해양심층수 파우치 워터입니다."
+  />
+
+  <meta property="og:title" content="몸愛좋은물 Gold" />
+  <meta property="og:description" content="1032m DEEP SEA WATER, 새로운 파우치 워터의 시작" />
+  <meta property="og:image" content="assets/images/gold-hero-product.png" />
+  <meta property="og:type" content="website" />
 
   <style>
     :root {
-      --navy: #03131f;
-      --navy-2: #061f34;
-      --ink: #f5fbff;
-      --muted: rgba(226, 241, 249, .72);
-      --dim: rgba(219, 236, 245, .52);
-      --cyan: #72d5ff;
-      --cyan-soft: #b7ebff;
-      --gold: #d7ad68;
-      --line: rgba(157, 214, 241, .20);
-      --panel: rgba(7, 30, 49, .74);
+      --navy: #031426;
+      --navy-2: #061d35;
+      --gold: #d8aa45;
+      --gold-light: #f5cf72;
+      --text: #f7fbff;
+      --muted: #b9c7d6;
+      --line: rgba(255, 255, 255, 0.14);
+      --card: rgba(255, 255, 255, 0.07);
+      --card-strong: rgba(255, 255, 255, 0.1);
     }
 
-    * { box-sizing: border-box; }
-    html { background: #020a12; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
-      min-width: 320px;
-      color: var(--ink);
       background:
-        radial-gradient(circle at 50% -10%, rgba(50, 165, 221, .32), transparent 31rem),
-        radial-gradient(circle at 100% 38%, rgba(19, 103, 153, .13), transparent 26rem),
-        linear-gradient(180deg, #08233a 0%, #031422 44%, #020a12 100%);
-      font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        radial-gradient(circle at top, rgba(24, 108, 174, 0.28), transparent 36rem),
+        linear-gradient(180deg, #031426 0%, #020a14 100%);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Apple SD Gothic Neo",
+        "Noto Sans KR",
+        "Pretendard",
+        "Segoe UI",
+        sans-serif;
+      word-break: keep-all;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     .page {
-      position: relative;
-      max-width: 640px;
+      width: 100%;
+      max-width: 520px;
+      min-height: 100vh;
       margin: 0 auto;
-      padding: 26px 20px 42px;
       overflow: hidden;
-      isolation: isolate;
+      background: linear-gradient(
+        180deg,
+        rgba(4, 20, 38, 0.97),
+        rgba(2, 10, 20, 0.99)
+      );
     }
 
-    .page::before {
-      position: absolute;
-      z-index: -1;
-      top: -110px;
-      left: 50%;
-      width: 155%;
-      height: 500px;
-      content: "";
-      transform: translateX(-50%);
-      opacity: .55;
-      background:
-        linear-gradient(101deg, transparent 37%, rgba(152, 229, 255, .14) 38%, transparent 50%),
-        linear-gradient(79deg, transparent 42%, rgba(152, 229, 255, .12) 43%, transparent 56%),
-        linear-gradient(92deg, transparent 49%, rgba(215, 248, 255, .10) 50%, transparent 62%);
-      filter: blur(2px);
-      pointer-events: none;
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 18px;
+      background: rgba(3, 14, 27, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
     }
 
     .brand {
       display: flex;
-      justify-content: center;
-      padding: 8px 0 31px;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
     }
 
     .brand img {
-      width: min(100%, 286px);
-      height: auto;
-      filter: drop-shadow(0 8px 22px rgba(0,0,0,.38));
+      display: block;
+      height: 28px;
+      width: auto;
     }
 
-    .eyebrow,
-    .section-label {
-      margin: 0;
-      color: var(--cyan);
-      font-size: .7rem;
-      font-weight: 700;
-      letter-spacing: .22em;
-      text-transform: uppercase;
+    .brand-text {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
     }
 
-    .hero { text-align: center; }
-    h1, h2, h3, p { margin-top: 0; }
+    .nav-link {
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(216, 170, 69, 0.48);
+      background: rgba(216, 170, 69, 0.08);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .hero {
+      padding: 46px 0 36px;
+    }
+
+    .hero-copy {
+      padding: 0 22px 30px;
+      text-align: center;
+    }
 
     h1 {
-      max-width: 590px;
-      margin: 14px auto 0;
-      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(1.72rem, 7.7vw, 3.2rem);
-      font-weight: 500;
-      line-height: 1.42;
-      letter-spacing: -.06em;
-      text-wrap: balance;
+      margin: 0;
+      font-size: 31px;
+      line-height: 1.32;
+      font-weight: 900;
+      letter-spacing: -0.055em;
     }
 
-    h1 .accent {
-      display: inline-block;
-      color: #a9e4ff;
-      text-shadow: 0 0 25px rgba(102, 212, 255, .28);
-    }
-
-    .event-title {
-      display: inline-block;
-      margin: 30px 0 0;
-      padding: 13px 22px 12px;
-      border-top: 1px solid rgba(215, 173, 104, .63);
-      border-bottom: 1px solid rgba(215, 173, 104, .63);
-      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(1.28rem, 4.7vw, 1.75rem);
-      font-weight: 500;
-      letter-spacing: -.04em;
-    }
-
-    .event-date {
-      margin: 18px 0 0;
-      color: var(--gold);
-      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(1.01rem, 3.7vw, 1.22rem);
-      letter-spacing: .01em;
-    }
-
-    .drop {
+    .hero-copy .eng {
       display: block;
-      width: 17px;
-      height: 24px;
-      margin: 26px auto 28px;
-      border: 1px solid #a8e8ff;
-      border-radius: 67% 67% 72% 72%;
-      transform: rotate(45deg);
-      box-shadow: 0 0 18px rgba(83, 211, 255, .55);
+      margin-bottom: 22px;
+      color: var(--gold-light);
+      font-size: 17px;
+      line-height: 1.25;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-copy p {
+      max-width: 370px;
+      margin: 24px auto 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.78;
     }
 
     .hero-image-wrap {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(151, 215, 245, .18);
-      border-radius: 24px;
-      background: #061725;
-      box-shadow: 0 28px 60px rgba(0,0,0,.34);
+      padding: 0 22px;
     }
 
-    .hero-image-wrap img {
+    .hero-image {
       display: block;
       width: 100%;
       height: auto;
+      border-radius: 6px;
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.48);
+      background: rgba(255, 255, 255, 0.04);
     }
 
-    .intro-copy {
-      margin: 28px auto 0;
-      padding: 24px 22px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--panel);
-      color: #e4f3fa;
-      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: 1.04rem;
-      line-height: 1.87;
-      letter-spacing: -.028em;
-      text-align: center;
-      backdrop-filter: blur(9px);
-    }
-
-    .section { margin-top: 52px; }
-
-    .section-heading {
-      margin: 12px 0 0;
-      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(1.65rem, 5.6vw, 2.17rem);
-      font-weight: 500;
-      line-height: 1.38;
-      letter-spacing: -.06em;
-    }
-
-    .section-description {
-      margin: 16px 0 0;
-      color: var(--muted);
-      font-size: .97rem;
-      line-height: 1.82;
-      letter-spacing: -.02em;
-    }
-
-    .product-panel {
-      position: relative;
-      margin-top: 23px;
-      padding: 24px 20px 20px;
-      overflow: hidden;
-      border: 1px solid rgba(162, 216, 241, .19);
-      border-radius: 20px;
-      background:
-        linear-gradient(135deg, rgba(26, 94, 130, .30), rgba(5, 26, 43, .83) 58%),
-        rgba(4, 24, 40, .68);
-    }
-
-    .product-panel::after {
-      position: absolute;
-      top: -73px;
-      right: -49px;
-      width: 185px;
-      height: 185px;
-      content: "";
-      border: 1px solid rgba(125, 214, 252, .10);
-      border-radius: 50%;
-    }
-
-    .product-kicker {
-      margin: 0;
-      color: var(--gold);
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .16em;
-    }
-
-    .product-name {
-      margin: 10px 0 0;
-      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: 1.56rem;
-      font-weight: 500;
-      letter-spacing: -.06em;
-    }
-
-    .product-copy {
-      position: relative;
-      z-index: 1;
-      margin: 12px 0 0;
-      color: #d9edf7;
-      font-size: .94rem;
-      line-height: 1.82;
-      letter-spacing: -.024em;
-    }
-
-    .metrics {
+    .cta-row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      margin-top: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 24px 22px 0;
     }
 
-    .metric {
-      min-height: 116px;
-      padding: 14px 8px 12px;
-      border: 1px solid rgba(176, 224, 244, .16);
-      border-radius: 14px;
-      background: rgba(0, 13, 24, .23);
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 900;
       text-align: center;
     }
 
-    .metric-number {
-      display: block;
+    .btn.primary {
+      background: linear-gradient(135deg, #e7c86a, #b98625);
+      color: #07101a;
+    }
+
+    .btn.secondary {
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+    }
+
+    section {
+      padding: 44px 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-title {
+      margin-bottom: 22px;
+    }
+
+    .section-title .num {
+      margin-bottom: 9px;
       color: var(--gold);
-      font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
-      font-size: clamp(1.3rem, 5vw, 1.75rem);
-      line-height: 1.04;
-      letter-spacing: -.055em;
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: 0.16em;
     }
 
-    .metric-word {
-      display: block;
-      margin-top: 7px;
-      color: #e9f5fb;
-      font-size: .72rem;
-      font-weight: 600;
-      line-height: 1.42;
+    h2 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.28;
+      font-weight: 900;
+      letter-spacing: -0.045em;
     }
 
-    .metric-sub {
+    .lead {
+      margin: 15px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.78;
+    }
+
+    .image-card {
+      margin-top: 24px;
+    }
+
+    .photo {
       display: block;
-      margin-top: 3px;
-      color: var(--dim);
-      font-size: .64rem;
+      width: 100%;
+      height: auto;
+      border-radius: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.42);
+    }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .spec {
+      min-height: 92px;
+      padding: 16px 15px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+
+    .spec small {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 12px;
       line-height: 1.35;
     }
 
-    .info-list {
-      margin-top: 18px;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+    .spec strong {
+      display: block;
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.35;
     }
 
-    .info-row {
-      display: grid;
-      grid-template-columns: 77px 1fr;
-      gap: 14px;
-      padding: 16px 2px;
-      border-bottom: 1px solid rgba(174, 209, 230, .13);
+    .spec strong.gold {
+      color: var(--gold-light);
     }
 
-    .info-row:last-child { border-bottom: 0; }
-
-    .info-label {
-      color: var(--cyan);
-      font-size: .76rem;
-      font-weight: 700;
-      letter-spacing: .11em;
-    }
-
-    .info-value {
-      color: #f1f8fb;
-      font-size: .93rem;
-      line-height: 1.62;
-      letter-spacing: -.02em;
-    }
-
-    .pouch-grid {
+    .feature-list {
       display: grid;
       gap: 12px;
-      margin-top: 22px;
+      margin-top: 24px;
     }
 
-    .pouch-card {
+    .feature {
       display: grid;
-      grid-template-columns: 42px 1fr;
-      gap: 15px;
+      grid-template-columns: 40px 1fr;
+      gap: 13px;
       align-items: start;
-      padding: 18px 17px;
-      border: 1px solid rgba(174, 219, 243, .17);
-      border-radius: 16px;
-      background: rgba(6, 31, 50, .58);
+      padding: 17px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--card);
     }
 
-    .pouch-index {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .icon {
       width: 40px;
       height: 40px;
-      border: 1px solid rgba(110, 213, 255, .45);
-      border-radius: 50%;
-      color: var(--cyan-soft);
-      font-size: .74rem;
-      font-weight: 700;
-      letter-spacing: .06em;
-    }
-
-    .pouch-card h3 {
-      margin: 0;
-      color: #f2f9fc;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: -.025em;
-    }
-
-    .pouch-card p {
-      margin: 6px 0 0;
-      color: var(--muted);
-      font-size: .88rem;
-      line-height: 1.72;
-      letter-spacing: -.02em;
-    }
-
-    .opening-section { margin-top: 52px; }
-
-    .opening-details {
-      margin-top: 21px;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .detail {
       display: grid;
-      grid-template-columns: 68px 1fr;
-      gap: 16px;
-      align-items: start;
-      padding: 18px 4px;
-      border-bottom: 1px solid rgba(174, 209, 230, .13);
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid rgba(216, 170, 69, 0.45);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 950;
     }
 
-    .detail:last-child { border-bottom: 0; }
-
-    .detail-label {
-      color: var(--cyan);
-      font-size: .79rem;
-      font-weight: 700;
-      letter-spacing: .13em;
+    .feature h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+      line-height: 1.35;
     }
 
-    .detail-value {
-      color: #f3f8fb;
-      font-size: .96rem;
-      line-height: 1.68;
-      letter-spacing: -.025em;
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
     }
 
-    /* Garden image: full content width, no default figure side margin */
-    .garden-photo {
-      margin: 24px 0 0;
-      overflow: hidden;
-      border: 1px solid rgba(174, 209, 230, .22);
-      border-radius: 18px;
-      background: #071827;
-      box-shadow: 0 16px 32px rgba(0,0,0,.22);
+    .quality-box {
+      margin-top: 24px;
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid rgba(61, 169, 255, 0.28);
+      background:
+        linear-gradient(135deg, rgba(15, 109, 181, 0.18), rgba(255, 255, 255, 0.04));
     }
 
-    .garden-photo img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      object-position: center;
+    .quality-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.78;
     }
 
-    .garden-caption {
-      margin: 10px 0 0;
-      color: var(--dim);
-      font-size: .76rem;
-      line-height: 1.55;
-      letter-spacing: -.01em;
+    .quality-box strong {
+      color: #58c6ff;
+    }
+
+    .contact {
+      padding-bottom: 56px;
       text-align: center;
     }
 
-    .map-link {
+    .contact-card {
+      margin-top: 24px;
+      padding: 24px 18px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: var(--card-strong);
+      text-align: left;
+    }
+
+    .contact-card p {
+      margin: 9px 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .contact-card strong {
+      color: var(--text);
+      margin-right: 6px;
+    }
+
+    .footer-logo {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      width: 100%;
-      margin-top: 23px;
-      padding: 17px 20px;
-      border: 1px solid rgba(113, 209, 249, .54);
-      border-radius: 999px;
-      color: #e6f7ff;
-      background: rgba(12, 67, 100, .44);
-      font-size: .97rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: transform 160ms ease, background 160ms ease;
+      gap: 18px;
+      margin-top: 26px;
+      opacity: 0.92;
     }
 
-    .map-link:hover,
-    .map-link:focus-visible {
-      background: rgba(23, 110, 157, .62);
-      transform: translateY(-2px);
+    .footer-logo img {
+      max-height: 34px;
+      width: auto;
     }
 
-    .map-link svg {
-      width: 19px;
-      height: 19px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 1.7;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+    .notice {
+      margin: 20px 0 0;
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 12px;
+      line-height: 1.65;
     }
 
-    .footer {
-      margin-top: 39px;
-      text-align: center;
-    }
+    @media (min-width: 760px) {
+      body {
+        padding: 28px 0;
+      }
 
-    .footer img {
-      width: min(100%, 132px);
-      height: auto;
-      opacity: .90;
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
-    }
-
-    .footer p {
-      margin: 15px 0 0;
-      color: rgba(212, 232, 243, .52);
-      font-size: .71rem;
-      letter-spacing: .06em;
+      .page {
+        border-radius: 32px;
+        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+      }
     }
 
     @media (max-width: 390px) {
-      .page { padding-right: 16px; padding-left: 16px; }
-      .event-title { padding-right: 17px; padding-left: 17px; }
-      .metric { padding-right: 6px; padding-left: 6px; }
-      .metric-word { font-size: .68rem; }
-      .intro-copy { padding-right: 18px; padding-left: 18px; }
-    }
+      .brand-text {
+        display: none;
+      }
 
-    @media (prefers-reduced-motion: reduce) {
-      * { scroll-behavior: auto !important; transition: none !important; }
+      .hero {
+        padding-top: 40px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .hero-copy .eng {
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+
+      .hero-copy p {
+        font-size: 15px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
 
 <body>
   <main class="page">
-    <header class="brand" aria-label="WATERVIS">
-      <img src="assets/logos/watervis-white.png" alt="WATERVIS" />
+
+    <header class="topbar">
+      <a class="brand" href="#">
+        <img src="assets/logos/bodygoodwater-white.png" alt="몸愛좋은물 로고" />
+        <span class="brand-text">Gold New Launch</span>
+      </a>
+
+      <a class="nav-link" href="#product">제품 보기</a>
     </header>
 
-    <section class="hero" aria-labelledby="hero-title">
-      <p class="eyebrow">OPENING INVITATION</p>
-      <h1 id="hero-title">
-        1032m<br />
-        깊은 바다에서 시작되는<br />
-        <span class="accent">워터비스의 새로운 여정</span>
-      </h1>
+    <section class="hero" aria-label="몸愛좋은물 Gold 신제품 소개">
+      <div class="hero-copy">
+        <h1>
+          <span class="eng">1032m DEEP SEA WATER</span>
+          새로운 파우치 워터의 시작
+        </h1>
 
-      <p class="event-title">파우치 워터 공장 오픈식</p>
-      <p class="event-date">2026년 7월 10일 (금) 오후 2시부터</p>
-      <span class="drop" aria-hidden="true"></span>
-    </section>
-
-    <section class="hero-image-wrap" aria-label="몸愛좋은물 Gold 파우치 워터">
-      <img src="assets/images/opening-hero.jpg" alt="심해를 배경으로 한 몸愛좋은물 Gold 파우치 워터" />
-    </section>
-
-    <p class="intro-copy">
-      워터비스가 깊은 바다의 가치를 더 가까이 전하기 위해<br />
-      파우치 워터 공장을 새롭게 엽니다.<br />
-      그 첫 순간에 함께해 주시기를 바랍니다.
-    </p>
-
-    <section class="section" aria-labelledby="product-heading">
-      <p class="section-label">PRODUCT OVERVIEW</p>
-      <h2 class="section-heading" id="product-heading">
-        깊이, 미네랄, 그리고<br />새로운 파우치 경험
-      </h2>
-      <p class="section-description">
-        몸愛좋은물 Gold는 강원도 양양 원포에서 취수한 해양심층수를
-        350mL 스탠드 파우치에 담은 프리미엄 먹는해양심층수입니다.
-      </p>
-
-      <div class="product-panel">
-        <p class="product-kicker">PREMIUM DEEP SEA WATER</p>
-        <h3 class="product-name">몸愛좋은물 Gold</h3>
-        <p class="product-copy">
-          깊은 바다의 원수 특성과 경도 300mg/L의 미네랄 기준을 바탕으로,
-          일상 가까이에서 경험할 수 있도록 설계했습니다.
+        <p>
+          몸愛좋은물 Gold, 1032m 깊이의 가치를<br>
+          350mL 캡형 파우치에 담았습니다.
         </p>
-
-        <div class="metrics" aria-label="제품 핵심 수치">
-          <div class="metric">
-            <span class="metric-number">1,032m</span>
-            <span class="metric-word">취수 수심</span>
-            <span class="metric-sub">DEEP SEA ORIGIN</span>
-          </div>
-          <div class="metric">
-            <span class="metric-number">300mg/L</span>
-            <span class="metric-word">경도 기준</span>
-            <span class="metric-sub">HARDNESS</span>
-          </div>
-          <div class="metric">
-            <span class="metric-number">350mL</span>
-            <span class="metric-word">파우치</span>
-            <span class="metric-sub">STAND POUCH</span>
-          </div>
-        </div>
       </div>
 
-      <div class="info-list" aria-label="제품 사양">
-        <div class="info-row">
-          <div class="info-label">취수 해역</div>
-          <div class="info-value">강원도 양양 원포</div>
+      <div class="hero-image-wrap">
+        <img
+          class="hero-image"
+          src="assets/images/gold-hero-product.png"
+          alt="몸愛좋은물 Gold 신제품 파우치 워터"
+        />
+      </div>
+
+      <div class="cta-row">
+        <a class="btn primary" href="#product">제품 보기</a>
+        <a class="btn secondary" href="#contact">제휴 문의</a>
+      </div>
+    </section>
+
+    <section id="lifestyle">
+      <div class="section-title">
+        <div class="num">01 LIFESTYLE</div>
+        <h2>깊은 바다의 가치를<br>일상 가까이</h2>
+        <p class="lead">
+          가볍게 들고, 더 가까이 마시는 350mL 파우치.
+          몸愛좋은물 Gold는 프리미엄 해양심층수를 일상의 순간에 더 자연스럽게 전합니다.
+        </p>
+      </div>
+
+      <div class="image-card">
+        <img
+          class="photo"
+          src="assets/images/gold-lifestyle-sea.png"
+          alt="바닷가에서 몸愛좋은물 Gold 파우치를 들고 있는 라이프스타일 이미지"
+        />
+      </div>
+    </section>
+
+    <section id="wellness">
+      <div class="section-title">
+        <div class="num">02 WELLNESS ROUTINE</div>
+        <h2>매일의 컨디션을<br>생각하는 선택</h2>
+        <p class="lead">
+          경도 300mg/L 기준의 미네랄 밸런스.
+          건강한 하루를 생각하는 사람에게 깊은 바다의 미네랄 특성을 더 가까이 전합니다.
+        </p>
+      </div>
+
+      <div class="image-card">
+        <img
+          class="photo"
+          src="assets/images/gold-wellness-morning.png"
+          alt="아침 웰니스 루틴과 몸愛좋은물 Gold 파우치 이미지"
+        />
+      </div>
+    </section>
+
+    <section id="product">
+      <div class="section-title">
+        <div class="num">03 PRODUCT SPEC</div>
+        <h2>제품 한눈에 보기</h2>
+        <p class="lead">
+          강원도 양양 원포 해역 수심 1,032m에서 취수한 해양심층수를
+          350mL 캡형 파우치에 담았습니다.
+        </p>
+      </div>
+
+      <div class="spec-grid">
+        <div class="spec">
+          <small>제품명</small>
+          <strong>몸愛좋은물 Gold</strong>
         </div>
-        <div class="info-row">
-          <div class="info-label">식품 유형</div>
-          <div class="info-value">먹는해양심층수</div>
+
+        <div class="spec">
+          <small>식품유형</small>
+          <strong>먹는해양심층수</strong>
         </div>
-        <div class="info-row">
-          <div class="info-label">포장 단위</div>
-          <div class="info-value">350mL 파우치 · 36개 / 박스</div>
+
+        <div class="spec">
+          <small>내용량</small>
+          <strong class="gold">350mL</strong>
+        </div>
+
+        <div class="spec">
+          <small>취수 수심</small>
+          <strong class="gold">1,032m</strong>
+        </div>
+
+        <div class="spec">
+          <small>취수 해역</small>
+          <strong>강원도 양양 원포</strong>
+        </div>
+
+        <div class="spec">
+          <small>경도</small>
+          <strong class="gold">300mg/L</strong>
+        </div>
+
+        <div class="spec">
+          <small>포장단위</small>
+          <strong class="gold">36개 / 박스</strong>
+        </div>
+
+        <div class="spec">
+          <small>권장소비자가</small>
+          <strong>&nbsp;</strong>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="pouch-heading">
-      <p class="section-label">WHY POUCH</p>
-      <h2 class="section-heading" id="pouch-heading">
-        깊은 바다의 가치를<br />더 가볍고, 더 가까이
-      </h2>
-
-      <div class="pouch-grid">
-        <article class="pouch-card">
-          <span class="pouch-index">01</span>
-          <div>
-            <h3>세워 보관하는 스탠드 구조</h3>
-            <p>바닥면이 넓어 자립 보관이 가능하도록 설계한 350mL 파우치입니다.</p>
-          </div>
-        </article>
-
-        <article class="pouch-card">
-          <span class="pouch-index">02</span>
-          <div>
-            <h3>빛 노출을 고려한 불투명 필름</h3>
-            <p>제품 보관 환경과 경험을 고려해 불투명 OPA 필름을 적용했습니다.</p>
-          </div>
-        </article>
-
-        <article class="pouch-card">
-          <span class="pouch-index">03</span>
-          <div>
-            <h3>일상에 맞춘 휴대와 사용성</h3>
-            <p>이동·보관·음용이 자연스럽게 이어지는 파우치 워터 경험을 제안합니다.</p>
-          </div>
-        </article>
+    <section id="why">
+      <div class="section-title">
+        <div class="num">04 WHY POUCH</div>
+        <h2>왜 파우치인가</h2>
+        <p class="lead">
+          병을 대체하기 위한 선택이 아니라,
+          깊은 바다의 가치를 더 가볍고 가까운 방식으로 전달하기 위한 새로운 형태입니다.
+        </p>
       </div>
-    </section>
 
-    <section class="opening-section" aria-labelledby="opening-heading">
-      <p class="section-label">OPENING INFORMATION</p>
-      <h2 class="section-heading" id="opening-heading">오픈식 안내</h2>
-
-      <div class="opening-details">
-        <div class="detail">
-          <div class="detail-label">일시</div>
-          <div class="detail-value">2026년 7월 10일 (금) 오후 2시부터</div>
+      <div class="feature-list">
+        <div class="feature">
+          <div class="icon">01</div>
+          <div>
+            <h3>가볍고 휴대하기 쉬운 구조</h3>
+            <p>
+              350mL 캡형 파우치로 이동, 운동, 업무, 여행 등 다양한 순간에
+              간편하게 휴대할 수 있습니다.
+            </p>
+          </div>
         </div>
-        <div class="detail">
-          <div class="detail-label">장소</div>
-          <div class="detail-value">
-            (주)워터비스 파우치 공장 옆 가든<br />
-            강원특별자치도 양양군 현남면 원포1길 53
+
+        <div class="feature">
+          <div class="icon">02</div>
+          <div>
+            <h3>넓은 전면의 브랜드 경험</h3>
+            <p>
+              블랙 파우치 전면에 깊은 바다의 이미지를 담아
+              프리미엄 브랜드 인상을 전달합니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="icon">03</div>
+          <div>
+            <h3>보관과 진열을 고려한 패키지</h3>
+            <p>
+              세워서 보관할 수 있는 형태로 소비자 경험과
+              유통 편의성을 함께 고려했습니다.
+            </p>
           </div>
         </div>
       </div>
-
-      <figure class="garden-photo">
-        <img src="assets/images/opening-garden.jpg" alt="워터비스 파우치 공장 옆 가든 전경" />
-      </figure>
-      <p class="garden-caption">워터비스 파우치 공장 옆 가든 전경</p>
-
-      <a class="map-link"
-         href="https://map.naver.com/p/search/강원특별자치도%20양양군%20현남면%20원포1길%2053"
-         target="_blank"
-         rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M20 10.7c0 5.2-8 10.3-8 10.3S4 15.9 4 10.7A8 8 0 1 1 20 10.7Z"></path>
-          <circle cx="12" cy="10.7" r="2.5"></circle>
-        </svg>
-        네이버지도에서 길찾기
-      </a>
     </section>
 
-    <footer class="footer">
-      <img src="assets/logos/bodygoodwater-white.png" alt="몸愛좋은물" />
-      <p>WATERVIS · PREMIUM DEEP SEA WATER</p>
-    </footer>
+    <section id="quality">
+      <div class="section-title">
+        <div class="num">05 QUALITY</div>
+        <h2>검증 가능한 수질에서<br>시작됩니다</h2>
+        <p class="lead">
+          워터비스 해양심층수는 정기 수질검사를 통해 기본 수질, 영양염류,
+          주요 원소 및 유해영향물질 항목을 확인합니다.
+        </p>
+      </div>
+
+      <div class="quality-box">
+        <p>
+          <strong>수심 1,032m 해양심층수</strong>의 청정성과 미네랄 특성을 바탕으로,
+          일상에서 마실 수 있는 프리미엄 파우치 워터를 제안합니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="section-title">
+        <div class="num">CONTACT</div>
+        <h2>비즈니스 제휴 문의</h2>
+        <p class="lead">
+          유통, 대량 납품, OEM/ODM 및 수출 관련 제휴 문의를 환영합니다.
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <p><strong>회사명</strong> ㈜워터비스</p>
+        <p><strong>전화번호</strong> <a href="tel:0336721032">033-672-1032</a></p>
+        <p><strong>이메일</strong> <a href="mailto:wa1032@naver.com">wa1032@naver.com</a></p>
+        <p><strong>주소</strong> 강원특별자치도 양양군 현남면 원포 1길 53</p>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn primary" href="tel:0336721032">전화 문의</a>
+        <a class="btn secondary" href="mailto:wa1032@naver.com">이메일 문의</a>
+      </div>
+
+      <div class="footer-logo">
+        <img src="assets/logos/bodygoodwater-white.png" alt="몸愛좋은물 로고" />
+        <img src="assets/logos/watervis-white.png" alt="워터비스 로고" />
+      </div>
+
+      <p class="notice">
+        본 페이지는 몸愛좋은물 Gold 신제품 소개 및 비즈니스 제휴 안내를 위한 페이지입니다.
+      </p>
+    </section>
+
   </main>
 </body>
 </html>
