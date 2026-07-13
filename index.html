@@ -13,8 +13,16 @@
 
   <meta property="og:title" content="몸愛좋은물 Gold" />
   <meta property="og:description" content="1032m DEEP SEA WATER, 새로운 파우치 워터의 시작" />
-  <meta property="og:image" content="assets/images/gold-hero-product.png" />
+  <meta property="og:image" content="https://pouch.watervis.co.kr/assets/images/gold-hero-product.png" />
+  <meta property="og:url" content="https://pouch.watervis.co.kr/" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+
+  <link rel="canonical" href="https://pouch.watervis.co.kr/" />
+  <link rel="alternate" hreflang="ko" href="https://pouch.watervis.co.kr/" />
+  <link rel="alternate" hreflang="en" href="https://pouch.watervis.co.kr/en/" />
+  <link rel="alternate" hreflang="zh" href="https://pouch.watervis.co.kr/cn/" />
+  <link rel="alternate" hreflang="x-default" href="https://pouch.watervis.co.kr/" />
 
   <style>
     :root {
@@ -106,6 +114,13 @@
       white-space: nowrap;
     }
 
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 0 0 auto;
+    }
+
     .nav-link {
       flex: 0 0 auto;
       padding: 8px 12px;
@@ -115,6 +130,21 @@
       color: var(--gold-light);
       font-size: 13px;
       font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .lang-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 38px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
       white-space: nowrap;
     }
 
@@ -427,12 +457,16 @@
   <main class="page">
 
     <header class="topbar">
-      <a class="brand" href="#">
+      <a class="brand" href="https://watervis.co.kr/" aria-label="워터비스 홈페이지로 이동">
         <img src="assets/logos/bodygoodwater-white.png" alt="몸愛좋은물 로고" />
         <span class="brand-text">Gold New Launch</span>
       </a>
 
-      <a class="nav-link" href="#product">제품 보기</a>
+      <div class="top-actions">
+        <a class="nav-link" href="#product">제품 보기</a>
+        <a class="lang-link" href="en/" lang="en" hreflang="en" aria-label="View the English page">EN</a>
+        <a class="lang-link" href="cn/" lang="zh-CN" hreflang="zh" aria-label="查看中文页面">中文</a>
+      </div>
     </header>
 
     <section class="hero" aria-label="몸愛좋은물 Gold 신제품 소개">
