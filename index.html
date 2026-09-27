@@ -3,1286 +3,695 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#061a33" />
-  <meta name="description" content="동해 수심 1,032m에서 취수한 해양심층수를 연구하고 제품화하는 해양심층수 전문기업, 워터비스입니다." />
-  <meta property="og:title" content="워터비스 | 해양심층수 전문기업" />
-  <meta property="og:description" content="깊은 바다에서 시작되는 워터비스의 새로운 여정" />
+
+  <title>몸愛좋은물 Gold | 새로운 파우치 워터의 시작</title>
+
+  <meta
+    name="description"
+    content="몸愛좋은물 Gold는 1032m 깊이의 가치를 350mL 캡형 파우치에 담은 프리미엄 해양심층수 파우치 워터입니다."
+  />
+
+  <meta property="og:title" content="몸愛좋은물 Gold" />
+  <meta property="og:description" content="1032m DEEP SEA WATER, 새로운 파우치 워터의 시작" />
+  <meta property="og:image" content="https://pouch.watervis.co.kr/assets/images/gold-hero-product.png" />
+  <meta property="og:url" content="https://pouch.watervis.co.kr/" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://watervis.co.kr/" />
   <meta property="og:locale" content="ko_KR" />
-  <meta property="og:locale:alternate" content="en_US" />
-  <link rel="canonical" href="https://watervis.co.kr/" />
-  <link rel="alternate" hreflang="ko" href="https://watervis.co.kr/" />
-  <link rel="alternate" hreflang="en" href="https://watervis.co.kr/en/" />
-  <link rel="alternate" hreflang="zh" href="https://watervis.co.kr/cn/" />
-  <link rel="alternate" hreflang="x-default" href="https://watervis.co.kr/" />
-  <title>워터비스 | 해양심층수 전문기업</title>
+
+  <link rel="canonical" href="https://pouch.watervis.co.kr/" />
+  <link rel="alternate" hreflang="ko" href="https://pouch.watervis.co.kr/" />
+  <link rel="alternate" hreflang="en" href="https://pouch.watervis.co.kr/en/" />
+  <link rel="alternate" hreflang="zh" href="https://pouch.watervis.co.kr/cn/" />
+  <link rel="alternate" hreflang="x-default" href="https://pouch.watervis.co.kr/" />
 
   <style>
     :root {
-      --navy-950: #031226;
-      --navy-900: #061a33;
-      --navy-800: #0b2b50;
-      --blue-700: #005c9e;
-      --blue-500: #00a6d6;
-      --blue-200: #c9edf8;
-      --ice-100: #eef8fb;
-      --gold-500: #c7a35a;
-      --white: #ffffff;
-      --ink: #10243a;
-      --muted: #617488;
-      --line: rgba(16, 36, 58, 0.12);
-      --shadow: 0 24px 70px rgba(2, 19, 42, 0.14);
-      --radius-lg: 30px;
-      --radius-md: 20px;
-      --container: 1180px;
+      --navy: #031426;
+      --navy-2: #061d35;
+      --gold: #d8aa45;
+      --gold-light: #f5cf72;
+      --text: #f7fbff;
+      --muted: #b9c7d6;
+      --line: rgba(255, 255, 255, 0.14);
+      --card: rgba(255, 255, 255, 0.07);
+      --card-strong: rgba(255, 255, 255, 0.1);
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      color: var(--ink);
-      background: var(--white);
-      font-family: "Pretendard Variable", Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
-      line-height: 1.65;
+      background:
+        radial-gradient(circle at top, rgba(24, 108, 174, 0.28), transparent 36rem),
+        linear-gradient(180deg, #031426 0%, #020a14 100%);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Apple SD Gothic Neo",
+        "Noto Sans KR",
+        "Pretendard",
+        "Segoe UI",
+        sans-serif;
       word-break: keep-all;
-      -webkit-font-smoothing: antialiased;
-    }
-    body.nav-open { overflow: hidden; }
-    img { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    button, a { -webkit-tap-highlight-color: transparent; }
-
-    .container {
-      width: min(calc(100% - 40px), var(--container));
-      margin-inline: auto;
     }
 
-    .skip-link {
-      position: fixed;
-      left: 16px;
-      top: -80px;
-      z-index: 9999;
-      padding: 12px 16px;
-      border-radius: 10px;
-      background: var(--white);
-      color: var(--navy-900);
-      box-shadow: var(--shadow);
+    a {
+      color: inherit;
+      text-decoration: none;
     }
-    .skip-link:focus { top: 16px; }
 
-    .site-header {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 1000;
-      border-bottom: 1px solid transparent;
-      transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
+    .page {
+      width: 100%;
+      max-width: 520px;
+      min-height: 100vh;
+      margin: 0 auto;
+      overflow: hidden;
+      background: linear-gradient(
+        180deg,
+        rgba(4, 20, 38, 0.97),
+        rgba(2, 10, 20, 0.99)
+      );
     }
-    .site-header.scrolled {
-      background: rgba(255,255,255,.94);
-      border-color: var(--line);
-      box-shadow: 0 8px 30px rgba(2, 19, 42, .08);
-      backdrop-filter: blur(14px);
-    }
-    .header-inner {
-      height: 84px;
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 32px;
+      gap: 14px;
+      padding: 14px 18px;
+      background: rgba(3, 14, 27, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
     }
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      flex: 0 0 auto;
-    }
-    .brand img {
-      width: 190px;
-      height: auto;
-      filter: brightness(0) invert(1);
-      transition: filter .25s ease;
-    }
-    .site-header.scrolled .brand img { filter: none; }
 
-    .desktop-nav {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 28px;
-      color: rgba(255,255,255,.9);
-      font-size: 15px;
-      font-weight: 650;
-      letter-spacing: -.02em;
+      gap: 10px;
+      min-width: 0;
     }
-    .site-header.scrolled .desktop-nav { color: var(--ink); }
-    .desktop-nav a { position: relative; padding-block: 10px; }
-    .desktop-nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 100%;
-      bottom: 4px;
-      height: 2px;
-      background: var(--blue-500);
-      transition: right .2s ease;
+
+    .brand img {
+      display: block;
+      height: 28px;
+      width: auto;
     }
-    .desktop-nav a:hover::after,
-    .desktop-nav a:focus-visible::after { right: 0; }
-    .desktop-nav .nav-cta {
-      padding: 12px 18px;
+
+    .brand-text {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 0 0 auto;
+    }
+
+    .nav-link {
+      flex: 0 0 auto;
+      padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,.13);
-      border: 1px solid rgba(255,255,255,.35);
+      border: 1px solid rgba(216, 170, 69, 0.48);
+      background: rgba(216, 170, 69, 0.08);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
     }
-    .desktop-nav .nav-cta::after { display: none; }
-    .site-header.scrolled .desktop-nav .nav-cta {
-      color: var(--white);
-      background: var(--navy-900);
-      border-color: var(--navy-900);
-    }
-    /* 구매하기 (지인 주문 /order) — 2026-09-27 */
-    .desktop-nav { gap: 22px; }
-    .desktop-nav a { white-space: nowrap; }
-    .desktop-nav .nav-buy { color: #f1d79a; font-weight: 800; }
-    .site-header.scrolled .desktop-nav .nav-buy { color: var(--gold-500); }
-    .mobile-nav .mobile-buy { color: #f1d79a; font-weight: 800; }
-    .pouch-actions { display: flex; flex-wrap: wrap; gap: 10px; }
-    .button-outline { border: 1px solid var(--navy-900); color: var(--navy-900); background: transparent; }
-    .button-outline:hover { background: var(--ice-100); }
-    .desktop-nav .lang-link {
+
+    .lang-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 46px;
-      padding: 8px 12px;
-      border: 1px solid rgba(255,255,255,.34);
+      min-width: 38px;
+      padding: 8px 10px;
       border-radius: 999px;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: .09em;
-      line-height: 1;
-    }
-    .desktop-nav .lang-link::after { display: none; }
-    .desktop-nav .lang-link:hover,
-    .desktop-nav .lang-link:focus-visible { background: rgba(255,255,255,.12); }
-    .site-header.scrolled .desktop-nav .lang-link {
-      color: var(--navy-900);
-      background: var(--white);
-      border-color: rgba(16,36,58,.20);
-    }
-    .site-header.scrolled .desktop-nav .lang-link:hover,
-    .site-header.scrolled .desktop-nav .lang-link:focus-visible { background: var(--ice-100); }
-
-    .menu-button {
-      display: none;
-      width: 44px;
-      height: 44px;
-      border: 0;
-      border-radius: 12px;
-      background: rgba(255,255,255,.12);
-      color: var(--white);
-      cursor: pointer;
-    }
-    .site-header.scrolled .menu-button { background: var(--ice-100); color: var(--navy-900); }
-    .menu-button span,
-    .menu-button::before,
-    .menu-button::after {
-      content: "";
-      display: block;
-      width: 21px;
-      height: 2px;
-      margin: 5px auto;
-      border-radius: 2px;
-      background: currentColor;
-      transition: transform .2s ease, opacity .2s ease;
-    }
-    .menu-button[aria-expanded="true"] span { opacity: 0; }
-    .menu-button[aria-expanded="true"]::before { transform: translateY(7px) rotate(45deg); }
-    .menu-button[aria-expanded="true"]::after { transform: translateY(-7px) rotate(-45deg); }
-
-    .mobile-nav {
-      display: none;
-      position: fixed;
-      inset: 84px 0 0;
-      padding: 22px 20px 40px;
-      background: rgba(3,18,38,.98);
-      color: var(--white);
-    }
-    .mobile-nav.open { display: block; }
-    .mobile-nav a {
-      display: block;
-      padding: 18px 4px;
-      border-bottom: 1px solid rgba(255,255,255,.13);
-      font-size: 19px;
-      font-weight: 650;
-    }
-    .mobile-nav .mobile-lang {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: #9ee8f6;
-      font-size: 16px;
-      letter-spacing: .04em;
-    }
-    .mobile-nav .mobile-lang::after {
-      content: "→";
-      font-size: 18px;
-    }
-    .mobile-nav .mobile-cta {
-      margin-top: 22px;
-      padding: 15px 18px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 14px;
-      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
     }
 
     .hero {
-      position: relative;
-      min-height: 820px;
-      height: 100svh;
-      display: grid;
-      align-items: center;
-      overflow: hidden;
-      color: var(--white);
-      isolation: isolate;
+      padding: 46px 0 36px;
     }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -3;
-      background: url("assets/images/hero-ocean.webp") center 38% / cover no-repeat;
-      transform: scale(1.03);
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-      background:
-        radial-gradient(circle at 68% 12%, rgba(0, 197, 232, .20), transparent 28%),
-        linear-gradient(90deg, rgba(2,16,36,.94) 0%, rgba(2,23,49,.72) 48%, rgba(3,25,50,.28) 100%),
-        linear-gradient(0deg, rgba(3,18,38,.56), transparent 55%);
-    }
-    .hero-content { padding-top: 84px; }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      margin: 0 0 24px;
-      color: #9ee8f6;
-      font-size: 13px;
-      font-weight: 750;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-    }
-    .eyebrow::before {
-      content: "";
-      width: 40px;
-      height: 1px;
-      background: currentColor;
-    }
-    .hero h1 {
-      max-width: 840px;
-      margin: 0;
-      font-size: clamp(46px, 6.8vw, 86px);
-      line-height: 1.08;
-      letter-spacing: -.055em;
-      font-weight: 740;
-    }
-    .hero h1 strong {
-      display: block;
-      color: #90e3f3;
-      font-weight: inherit;
-    }
+
     .hero-copy {
-      max-width: 660px;
-      margin: 30px 0 0;
-      color: rgba(255,255,255,.78);
-      font-size: clamp(17px, 2vw, 21px);
-      letter-spacing: -.02em;
+      padding: 0 22px 30px;
+      text-align: center;
     }
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
+
+    h1 {
+      margin: 0;
+      font-size: 31px;
+      line-height: 1.32;
+      font-weight: 900;
+      letter-spacing: -0.055em;
+    }
+
+    .hero-copy .eng {
+      display: block;
+      margin-bottom: 22px;
+      color: var(--gold-light);
+      font-size: 17px;
+      line-height: 1.25;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-copy p {
+      max-width: 370px;
+      margin: 24px auto 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.78;
+    }
+
+    .hero-image-wrap {
+      padding: 0 22px;
+    }
+
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.48);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .cta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 12px;
-      margin-top: 38px;
+      padding: 24px 22px 0;
     }
-    .button {
-      display: inline-flex;
+
+    .btn {
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      min-height: 52px;
-      padding: 0 22px;
-      border: 1px solid transparent;
+      min-height: 48px;
       border-radius: 999px;
       font-size: 15px;
-      font-weight: 720;
-      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+      font-weight: 900;
+      text-align: center;
     }
-    .button:hover { transform: translateY(-2px); }
-    .button-primary { background: var(--white); color: var(--navy-900); }
-    .button-ghost { border-color: rgba(255,255,255,.35); background: rgba(255,255,255,.06); color: var(--white); }
-    .button-dark { background: var(--navy-900); color: var(--white); }
-    .button-outline { border-color: var(--line); background: var(--white); color: var(--ink); }
-    .button-arrow::after { content: "→"; font-size: 18px; }
 
-    .hero-index {
-      position: absolute;
-      right: max(20px, calc((100vw - var(--container)) / 2));
-      bottom: 44px;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(130px, 1fr));
-      gap: 1px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 18px;
-      background: rgba(255,255,255,.14);
-      backdrop-filter: blur(12px);
+    .btn.primary {
+      background: linear-gradient(135deg, #e7c86a, #b98625);
+      color: #07101a;
     }
-    .hero-index div {
-      min-width: 160px;
-      padding: 17px 20px;
-      background: rgba(3,18,38,.45);
-    }
-    .hero-index b { display: block; font-size: 23px; letter-spacing: -.035em; }
-    .hero-index span { color: rgba(255,255,255,.66); font-size: 12px; }
 
-    section { padding: 120px 0; }
-    .section-kicker {
-      margin: 0 0 16px;
-      color: var(--blue-700);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: .18em;
-      text-transform: uppercase;
+    .buy-row { padding: 24px 0 0; }
+    .buy-note { margin: 14px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; text-align: center; }
+    .buy-note a { color: var(--gold-light); font-weight: 800; white-space: nowrap; }
+
+    .btn.secondary {
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
     }
+
+    section {
+      padding: 44px 22px;
+      border-top: 1px solid var(--line);
+    }
+
     .section-title {
-      margin: 0;
-      font-size: clamp(36px, 5vw, 58px);
-      line-height: 1.16;
-      letter-spacing: -.045em;
-      font-weight: 760;
-    }
-    .section-lead {
-      max-width: 720px;
-      margin: 24px 0 0;
-      color: var(--muted);
-      font-size: 18px;
-      letter-spacing: -.018em;
+      margin-bottom: 22px;
     }
 
-    .intro { background: var(--white); }
-    .intro-grid {
+    .section-title .num {
+      margin-bottom: 9px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: 0.16em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.28;
+      font-weight: 900;
+      letter-spacing: -0.045em;
+    }
+
+    .lead {
+      margin: 15px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.78;
+    }
+
+    .image-card {
+      margin-top: 24px;
+    }
+
+    .photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.42);
+    }
+
+    .spec-grid {
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 72px;
-      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 24px;
     }
-    .intro-photo {
-      position: relative;
-      overflow: hidden;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-      background: var(--ice-100);
-    }
-    .intro-photo img { width: 100%; aspect-ratio: 1.24 / 1; object-fit: cover; }
-    .photo-badge {
-      position: absolute;
-      left: 24px;
-      bottom: 24px;
-      max-width: 260px;
-      padding: 18px 20px;
-      border: 1px solid rgba(255,255,255,.25);
+
+    .spec {
+      min-height: 92px;
+      padding: 16px 15px;
       border-radius: 18px;
-      background: rgba(3,18,38,.78);
-      color: var(--white);
-      backdrop-filter: blur(10px);
+      border: 1px solid var(--line);
+      background: var(--card);
     }
-    .photo-badge b { display: block; font-size: 18px; }
-    .photo-badge span { color: rgba(255,255,255,.7); font-size: 13px; }
+
+    .spec small {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .spec strong {
+      display: block;
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .spec strong.gold {
+      color: var(--gold-light);
+    }
 
     .feature-list {
       display: grid;
       gap: 12px;
-      margin-top: 36px;
+      margin-top: 24px;
     }
-    .feature-item {
+
+    .feature {
       display: grid;
-      grid-template-columns: 42px 1fr;
-      gap: 16px;
+      grid-template-columns: 40px 1fr;
+      gap: 13px;
       align-items: start;
-      padding: 17px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .feature-num {
-      display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: var(--ice-100);
-      color: var(--blue-700);
-      font-weight: 800;
-      font-size: 13px;
-    }
-    .feature-item b { display: block; margin-bottom: 3px; font-size: 17px; }
-    .feature-item p { margin: 0; color: var(--muted); font-size: 14px; }
-
-    .numbers {
-      padding: 0 0 120px;
-      background: var(--white);
-    }
-    .number-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      overflow: hidden;
+      padding: 17px;
+      border-radius: 18px;
       border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: var(--white);
-      box-shadow: 0 18px 55px rgba(2,19,42,.07);
+      background: var(--card);
     }
-    .number-card {
-      position: relative;
-      min-height: 210px;
-      padding: 34px 30px;
-      border-right: 1px solid var(--line);
-    }
-    .number-card:last-child { border-right: 0; }
-    .number-card::after {
-      content: "";
-      position: absolute;
-      left: 30px;
-      bottom: 0;
-      width: 44px;
-      height: 4px;
-      background: var(--blue-500);
-    }
-    .number-card strong {
-      display: block;
-      margin-bottom: 16px;
-      color: var(--navy-900);
-      font-size: clamp(38px, 4vw, 54px);
-      line-height: 1;
-      letter-spacing: -.05em;
-    }
-    .number-card b { display: block; margin-bottom: 6px; font-size: 16px; }
-    .number-card p { margin: 0; color: var(--muted); font-size: 13px; }
 
-    .depth {
-      position: relative;
-      overflow: hidden;
-      color: var(--white);
-      background: var(--navy-950);
-    }
-    .depth::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 85% 20%, rgba(0,166,214,.23), transparent 27%),
-        linear-gradient(120deg, rgba(0,92,158,.16), transparent 45%);
-      pointer-events: none;
-    }
-    .depth .section-kicker { color: #76d8ee; }
-    .depth .section-lead { color: rgba(255,255,255,.67); }
-    .depth-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 70px;
-      align-items: center;
-    }
-    .depth-visual {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: var(--radius-lg);
-      background: rgba(255,255,255,.05);
-      box-shadow: 0 36px 100px rgba(0,0,0,.35);
-    }
-    .depth-visual img { width: 100%; aspect-ratio: 1.4 / 1; object-fit: cover; }
-    .depth-caption {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,.12);
-    }
-    .depth-caption div { padding: 22px; background: rgba(3,18,38,.9); }
-    .depth-caption strong { display: block; color: #8fe3f2; font-size: 25px; }
-    .depth-caption span { color: rgba(255,255,255,.6); font-size: 13px; }
-    .depth-points {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 38px;
-    }
-    .depth-point {
-      min-height: 155px;
-      padding: 24px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 20px;
-      background: rgba(255,255,255,.045);
-    }
-    .depth-point span { color: #76d8ee; font-size: 12px; font-weight: 800; letter-spacing: .12em; }
-    .depth-point b { display: block; margin: 10px 0 6px; font-size: 17px; }
-    .depth-point p { margin: 0; color: rgba(255,255,255,.58); font-size: 13px; }
-
-    .process { background: var(--ice-100); }
-    .process-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 40px;
-      margin-bottom: 54px;
-    }
-    .process-head .section-lead { max-width: 480px; margin: 0; }
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-      margin-bottom: 44px;
-    }
-    .process-step {
-      position: relative;
-      min-height: 194px;
-      padding: 26px 22px;
-      border: 1px solid rgba(16,36,58,.1);
-      border-radius: 20px;
-      background: var(--white);
-    }
-    .process-step:not(:last-child)::after {
-      content: "→";
-      position: absolute;
-      z-index: 2;
-      right: -13px;
-      top: 50%;
-      width: 26px;
-      height: 26px;
+    .icon {
+      width: 40px;
+      height: 40px;
       display: grid;
       place-items: center;
-      transform: translateY(-50%);
       border-radius: 50%;
-      background: var(--navy-900);
-      color: var(--white);
+      border: 1px solid rgba(216, 170, 69, 0.45);
+      color: var(--gold-light);
       font-size: 13px;
-    }
-    .step-index { color: var(--blue-700); font-size: 12px; font-weight: 800; letter-spacing: .12em; }
-    .process-step h3 { margin: 16px 0 8px; font-size: 20px; letter-spacing: -.03em; }
-    .process-step p { margin: 0; color: var(--muted); font-size: 13px; }
-    .process-gallery {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr .85fr;
-      gap: 16px;
-    }
-    .process-photo {
-      position: relative;
-      overflow: hidden;
-      min-height: 315px;
-      border-radius: 24px;
-      background: var(--navy-900);
-    }
-    .process-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
-    .process-photo:hover img { transform: scale(1.035); }
-    .process-photo::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0;
-      height: 55%;
-      background: linear-gradient(0deg, rgba(3,18,38,.88), transparent);
-    }
-    .process-photo figcaption {
-      position: absolute;
-      z-index: 2;
-      left: 22px;
-      bottom: 18px;
-      color: var(--white);
-      font-weight: 700;
+      font-weight: 950;
     }
 
-    .research { background: var(--white); }
-    .research-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 70px;
-      align-items: center;
+    .feature h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+      line-height: 1.35;
     }
-    .research-collage {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 14px;
-    }
-    .research-collage img {
-      width: 100%;
-      height: 100%;
-      min-height: 420px;
-      object-fit: cover;
-      border-radius: 24px;
-      box-shadow: 0 18px 55px rgba(2,19,42,.1);
-    }
-    .research-collage img:first-child { margin-top: 56px; min-height: 350px; }
-    .research-points {
-      display: grid;
-      gap: 0;
-      margin-top: 34px;
-      border-top: 1px solid var(--line);
-    }
-    .research-point {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 22px;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .research-point b { font-size: 15px; }
-    .research-point span { color: var(--muted); font-size: 14px; }
 
-    .business {
-      color: var(--white);
-      background: linear-gradient(135deg, var(--navy-900), #0b3861);
-    }
-    .business .section-kicker { color: #84dced; }
-    .business .section-lead { color: rgba(255,255,255,.68); }
-    .business-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: 48px;
-    }
-    .business-card {
-      min-height: 280px;
-      padding: 30px;
-      border: 1px solid rgba(255,255,255,.13);
-      border-radius: 22px;
-      background: rgba(255,255,255,.05);
-      transition: transform .2s ease, background .2s ease;
-    }
-    .business-card:hover { transform: translateY(-5px); background: rgba(255,255,255,.08); }
-    .business-icon {
-      width: 46px;
-      height: 46px;
-      display: grid;
-      place-items: center;
-      border-radius: 14px;
-      background: rgba(125,224,243,.12);
-      color: #8fe3f2;
-      font-size: 20px;
-    }
-    .business-card h3 { margin: 48px 0 10px; font-size: 21px; }
-    .business-card p { margin: 0; color: rgba(255,255,255,.6); font-size: 14px; }
-
-    .pouch { background: #f6f3ed; }
-    .pouch-card {
-      display: grid;
-      grid-template-columns: 1.08fr .92fr;
-      overflow: hidden;
-      min-height: 520px;
-      border-radius: var(--radius-lg);
-      background: var(--white);
-      box-shadow: var(--shadow);
-    }
-    .pouch-image { position: relative; overflow: hidden; background: var(--navy-950); }
-    .pouch-image img { width: 100%; height: 100%; object-fit: cover; object-position: 35% center; }
-    .pouch-image::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, transparent 60%, rgba(3,18,38,.2));
-    }
-    .pouch-copy {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: clamp(38px, 6vw, 76px);
-    }
-    .pouch-label {
-      width: fit-content;
-      margin-bottom: 22px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(199,163,90,.13);
-      color: #8d6c2d;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .08em;
-    }
-    .pouch-copy h2 { margin: 0; font-size: clamp(36px, 4vw, 54px); line-height: 1.15; letter-spacing: -.045em; }
-    .pouch-copy p { margin: 22px 0 30px; color: var(--muted); font-size: 17px; }
-
-    .contact { padding-bottom: 70px; background: var(--white); }
-    .contact-card {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 70px;
-      padding: clamp(36px, 6vw, 72px);
-      border-radius: var(--radius-lg);
-      color: var(--white);
-      background: var(--navy-950);
-    }
-    .contact-card .section-kicker { color: #79d9ee; }
-    .contact-card .section-title { font-size: clamp(34px, 4vw, 50px); }
-    .contact-card p { color: rgba(255,255,255,.64); }
-    .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
-    .contact-info {
-      display: grid;
-      align-content: center;
-      gap: 0;
-      border-top: 1px solid rgba(255,255,255,.15);
-    }
-    .contact-row {
-      display: grid;
-      grid-template-columns: 88px 1fr;
-      gap: 20px;
-      padding: 18px 0;
-      border-bottom: 1px solid rgba(255,255,255,.15);
-    }
-    .contact-row dt { color: rgba(255,255,255,.48); font-size: 13px; }
-    .contact-row dd { margin: 0; color: rgba(255,255,255,.9); font-size: 15px; }
-
-    .site-footer {
-      padding: 28px 0 36px;
-      background: var(--white);
+    .feature p {
+      margin: 0;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 14px;
+      line-height: 1.65;
     }
-    .footer-inner {
+
+    .quality-box {
+      margin-top: 24px;
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid rgba(61, 169, 255, 0.28);
+      background:
+        linear-gradient(135deg, rgba(15, 109, 181, 0.18), rgba(255, 255, 255, 0.04));
+    }
+
+    .quality-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.78;
+    }
+
+    .quality-box strong {
+      color: #58c6ff;
+    }
+
+    .contact {
+      padding-bottom: 56px;
+      text-align: center;
+    }
+
+    .contact-card {
+      margin-top: 24px;
+      padding: 24px 18px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: var(--card-strong);
+      text-align: left;
+    }
+
+    .contact-card p {
+      margin: 9px 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .contact-card strong {
+      color: var(--text);
+      margin-right: 6px;
+    }
+
+    .footer-logo {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .footer-logo { width: 132px; opacity: .78; }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity .65s ease, transform .65s ease;
-    }
-    .reveal.visible { opacity: 1; transform: none; }
-
-    @media (max-width: 1040px) {
-      .desktop-nav { display: none; }
-      .menu-button { display: block; }
-      .brand img { width: 170px; }
-      .intro-grid, .depth-grid, .research-grid { grid-template-columns: 1fr; gap: 50px; }
-      .number-grid { grid-template-columns: repeat(2, 1fr); }
-      .number-card:nth-child(2) { border-right: 0; }
-      .number-card:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-      .process-steps { grid-template-columns: repeat(2, 1fr); }
-      .process-step:not(:last-child)::after { display: none; }
-      .process-gallery { grid-template-columns: 1fr 1fr; }
-      .process-photo:first-child { grid-column: 1 / -1; }
-      .business-grid { grid-template-columns: repeat(2, 1fr); }
-      .pouch-card { grid-template-columns: 1fr; }
-      .pouch-image { min-height: 440px; }
-      .contact-card { grid-template-columns: 1fr; gap: 44px; }
-    }
-
-    @media (max-width: 720px) {
-      .container { width: min(calc(100% - 28px), var(--container)); }
-      .header-inner { height: 72px; }
-      .mobile-nav { inset-block-start: 72px; }
-      .brand img { width: 145px; }
-      .hero { min-height: 720px; height: auto; padding: 160px 0 48px; }
-      .hero-content { padding-top: 0; }
-      .hero h1 { font-size: clamp(42px, 13vw, 60px); }
-      .hero-index {
-        position: static;
-        width: min(calc(100% - 28px), var(--container));
-        left: auto;
-        right: auto;
-        bottom: auto;
-        margin: 32px auto 0;
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .hero-index div { min-width: 0; padding: 14px; }
-      .hero-index b { font-size: 19px; }
-      section { padding: 88px 0; }
-      .numbers { padding-bottom: 88px; }
-      .section-title { font-size: 38px; }
-      .section-lead { font-size: 16px; }
-      .intro-photo { max-height: 320px; overflow: hidden; }
-      .intro-photo img { width: 100%; height: 320px; aspect-ratio: auto; object-fit: cover; }
-      .number-grid { grid-template-columns: 1fr; }
-      .number-card { min-height: 170px; border-right: 0; border-bottom: 1px solid var(--line); }
-      .number-card:last-child { border-bottom: 0; }
-      .number-card:nth-child(2) { border-right: 0; }
-      .depth-points { grid-template-columns: 1fr; }
-      .process-head { display: block; }
-      .process-head .section-lead { margin-top: 20px; }
-      .process-steps { grid-template-columns: 1fr; }
-      .process-gallery { grid-template-columns: 1fr; }
-      .process-photo:first-child { grid-column: auto; }
-      .process-photo { min-height: 260px; }
-      .research-collage { grid-template-columns: 1fr; }
-      .research-collage img, .research-collage img:first-child { min-height: 300px; margin-top: 0; }
-      .research-point { grid-template-columns: 1fr; gap: 6px; }
-      .business-grid { grid-template-columns: 1fr; }
-      .business-card { min-height: 230px; }
-      .business-card h3 { margin-top: 34px; }
-      .pouch-image { min-height: 310px; }
-      .pouch-copy { padding: 38px 28px 44px; }
-      .contact-card { padding: 38px 26px; }
-      .contact-row { grid-template-columns: 70px 1fr; }
-      .footer-inner { align-items: flex-start; flex-direction: column; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
-      .reveal { opacity: 1; transform: none; }
-    }
-  
-    /* Header logo correction: preserve the official blue V and use white lettering. */
-    .brand img {
-      filter: none;
-    }
-
-    /* Keep the sticky header dark so the white header logo remains legible. */
-    .site-header.scrolled {
-      background: rgba(3, 18, 38, .94);
-      border-color: rgba(255,255,255,.12);
-      box-shadow: 0 8px 30px rgba(2, 19, 42, .18);
-      backdrop-filter: blur(14px);
-    }
-    .site-header.scrolled .desktop-nav {
-      color: rgba(255,255,255,.9);
-    }
-    .site-header.scrolled .desktop-nav .nav-cta {
-      color: var(--white);
-      background: rgba(255,255,255,.13);
-      border-color: rgba(255,255,255,.35);
-    }
-    .site-header.scrolled .desktop-nav .lang-link {
-      color: var(--white);
-      background: transparent;
-      border-color: rgba(255,255,255,.34);
-    }
-    .site-header.scrolled .desktop-nav .lang-link:hover,
-    .site-header.scrolled .desktop-nav .lang-link:focus-visible {
-      background: rgba(255,255,255,.12);
-    }
-    .site-header.scrolled .menu-button {
-      background: rgba(255,255,255,.12);
-      color: var(--white);
-    }
-
-  
-    /* Official brand assets */
-    .brand img {
-      width: 188px;
-      height: auto;
-      filter: none !important;
-    }
-
-    .pouch-brand-logo {
-      display: block;
-      width: min(240px, 76%);
-      height: auto;
-      margin: 0 0 20px;
-      object-fit: contain;
-    }
-
-    .footer-brands {
-      display: flex;
-      align-items: center;
+      justify-content: center;
       gap: 18px;
-      min-width: 0;
+      margin-top: 26px;
+      opacity: 0.92;
     }
 
-    .footer-brand-watervis {
-      width: 132px;
-      height: auto;
-      opacity: .88;
+    .footer-logo img {
+      max-height: 34px;
+      width: auto;
     }
 
-    .footer-brand-divider {
-      width: 1px;
-      height: 28px;
-      background: rgba(3, 18, 38, .16);
+    .notice {
+      margin: 20px 0 0;
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 12px;
+      line-height: 1.65;
     }
 
-    .footer-brand-product {
-      width: 142px;
-      height: auto;
-      opacity: .88;
+    @media (min-width: 760px) {
+      body {
+        padding: 28px 0;
+      }
+
+      .page {
+        border-radius: 32px;
+        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+      }
     }
 
-    @media (max-width: 640px) {
-      .brand img { width: 150px; }
-      .pouch-brand-logo { width: min(220px, 74%); }
-      .footer-brands { gap: 12px; }
-      .footer-brand-watervis { width: 112px; }
-      .footer-brand-product { width: 124px; }
-      .footer-brand-divider { height: 24px; }
-    }
+    @media (max-width: 390px) {
+      .brand-text {
+        display: none;
+      }
 
-  
-    /* Header brands: WATERVIS + 몸愛좋은물 */
-    .header-brands {
-      display: inline-flex;
-      align-items: center;
-      gap: 15px;
-      min-width: 0;
-    }
+      .hero {
+        padding-top: 40px;
+      }
 
-    .header-brands img {
-      display: block;
-      height: auto;
-      filter: none !important;
-      flex: 0 0 auto;
-    }
+      h1 {
+        font-size: 28px;
+      }
 
-    .header-brand-watervis {
-      width: 132px !important;
-      opacity: .98;
-    }
+      .hero-copy .eng {
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
 
-    .header-brand-divider {
-      width: 1px;
-      height: 29px;
-      flex: 0 0 auto;
-      background: rgba(255, 255, 255, .34);
-    }
+      .hero-copy p {
+        font-size: 15px;
+      }
 
-    .header-brand-product {
-      width: 142px !important;
-      opacity: .98;
+      h2 {
+        font-size: 26px;
+      }
     }
-
-    @media (max-width: 1180px) and (min-width: 1041px) {
-      .header-brands { gap: 11px; }
-      .header-brand-watervis { width: 116px !important; }
-      .header-brand-product { width: 124px !important; }
-      .header-brand-divider { height: 25px; }
-      .desktop-nav { gap: 13px; font-size: 13.5px; }
-      .desktop-nav .nav-cta { padding: 10px 14px; }
-    }
-
-    @media (max-width: 720px) {
-      .header-brands { gap: 9px; }
-      .header-brand-watervis { width: 98px !important; }
-      .header-brand-product { width: 104px !important; }
-      .header-brand-divider { height: 22px; }
-    }
-
-    @media (max-width: 380px) {
-      .header-brand-watervis { width: 88px !important; }
-      .header-brand-product { width: 94px !important; }
-      .header-brands { gap: 8px; }
-    }
-
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "주식회사 워터비스",
-    "url": "https://watervis.co.kr/",
-    "telephone": "+82-33-672-1032",
-    "email": "admin@watervis.co.kr",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "현남면 원포1길 53",
-      "addressLocality": "양양군",
-      "addressRegion": "강원특별자치도",
-      "addressCountry": "KR"
-    }
-  }
-  </script>
 </head>
-<body>
-  <a class="skip-link" href="#main">본문 바로가기</a>
 
-  <header class="site-header" id="header">
-    <div class="container header-inner">
-      <a class="brand header-brands" href="#top" aria-label="워터비스 홈">
-        <img
-          class="header-brand-watervis"
-          src="assets/logos/watervis-white.png"
-          alt="WATERVIS"
-          width="1156"
-          height="308"
-        />
-        <span class="header-brand-divider" aria-hidden="true"></span>
-        <img
-          class="header-brand-product"
-          src="assets/logos/bodygoodwater-white.png"
-          alt="몸愛좋은물"
-          width="992"
-          height="444"
-        />
+<body>
+  <main class="page">
+
+    <header class="topbar">
+      <a class="brand" href="https://watervis.co.kr/" aria-label="워터비스 홈페이지로 이동">
+        <img src="assets/logos/bodygoodwater-white.png" alt="몸愛좋은물 로고" />
+        <span class="brand-text">Gold New Launch</span>
       </a>
 
-      <nav class="desktop-nav" aria-label="주요 메뉴">
-        <a href="#company">회사소개</a>
-        <a href="#deep-ocean">1032m 해양심층수</a>
-        <a href="#technology">기술·생산</a>
-        <a href="#business">사업영역</a>
-        <a href="#contact">문의</a>
-        <a class="nav-buy" href="order/">구매하기</a>
-        <a class="lang-link" href="en/" lang="en" hreflang="en" aria-label="View the English website">EN</a>
-        <a class="lang-link" href="cn/" lang="zh-CN" hreflang="zh" aria-label="查看中文网站">中文</a>
-        <a class="nav-cta" href="https://pouch.watervis.co.kr" aria-label="파우치 워터 신제품 사이트로 이동">파우치 워터 ↗</a>
-      </nav>
+      <div class="top-actions">
+        <a class="nav-link" href="https://watervis.co.kr/order/">구매하기</a>
+        <a class="lang-link" href="en/" lang="en" hreflang="en" aria-label="View the English page">EN</a>
+        <a class="lang-link" href="cn/" lang="zh-CN" hreflang="zh" aria-label="查看中文页面">中文</a>
+      </div>
+    </header>
 
-      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-controls="mobile-nav" aria-expanded="false"><span></span></button>
-    </div>
+    <section class="hero" aria-label="몸愛좋은물 Gold 신제품 소개">
+      <div class="hero-copy">
+        <h1>
+          <span class="eng">1032m DEEP SEA WATER</span>
+          새로운 파우치 워터의 시작
+        </h1>
 
-    <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴">
-      <a href="#company">회사소개</a>
-      <a href="#deep-ocean">1032m 해양심층수</a>
-      <a href="#technology">기술·생산</a>
-      <a href="#business">사업영역</a>
-      <a href="#contact">문의</a>
-      <a class="mobile-buy" href="order/">구매하기 · 주문 조회</a>
-      <a class="mobile-lang" href="en/" lang="en" hreflang="en" aria-label="View the English website">EN · English</a>
-      <a class="mobile-lang" href="cn/" lang="zh-CN" hreflang="zh" aria-label="查看中文网站">中文 · Chinese</a>
-      <a class="mobile-cta" href="https://pouch.watervis.co.kr">파우치 워터 신제품 보기 ↗</a>
-    </nav>
-  </header>
+        <p>
+          몸愛좋은물 Gold, 1032m 깊이의 가치를<br>
+          350mL 캡형 파우치에 담았습니다.
+        </p>
+      </div>
 
-  <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="container hero-content">
-        <p class="eyebrow">Deep Sea · Pure Mineral</p>
-        <h1 id="hero-title">깊은 바다에서 시작되는<strong>워터비스의 새로운 여정</strong></h1>
-        <p class="hero-copy">동해 수심 1,032m에서 취수한 해양심층수의 청정함과 미네랄 가치를 연구하고, 새로운 제품으로 연결합니다.</p>
-        <div class="hero-actions">
-          <a class="button button-primary button-arrow" href="#company">워터비스 소개</a>
-          <a class="button button-ghost" href="#contact">사업 문의</a>
+      <div class="hero-image-wrap">
+        <img
+          class="hero-image"
+          src="assets/images/gold-hero-product.png"
+          alt="몸愛좋은물 Gold 신제품 파우치 워터"
+        />
+      </div>
+
+      <div class="cta-row">
+        <a class="btn primary" href="https://watervis.co.kr/order/">구매하기</a>
+        <a class="btn secondary" href="#product">제품 보기</a>
+      </div>
+    </section>
+
+    <section id="lifestyle">
+      <div class="section-title">
+        <div class="num">01 LIFESTYLE</div>
+        <h2>깊은 바다의 가치를<br>일상 가까이</h2>
+        <p class="lead">
+          가볍게 들고, 더 가까이 마시는 350mL 파우치.
+          몸愛좋은물 Gold는 프리미엄 해양심층수를 일상의 순간에 더 자연스럽게 전합니다.
+        </p>
+      </div>
+
+      <div class="image-card">
+        <img
+          class="photo"
+          src="assets/images/gold-lifestyle-sea.png"
+          alt="바닷가에서 몸愛좋은물 Gold 파우치를 들고 있는 라이프스타일 이미지"
+        />
+      </div>
+    </section>
+
+    <section id="wellness">
+      <div class="section-title">
+        <div class="num">02 WELLNESS ROUTINE</div>
+        <h2>매일의 컨디션을<br>생각하는 선택</h2>
+        <p class="lead">
+          경도 300mg/L 기준의 미네랄 밸런스.
+          건강한 하루를 생각하는 사람에게 깊은 바다의 미네랄 특성을 더 가까이 전합니다.
+        </p>
+      </div>
+
+      <div class="image-card">
+        <img
+          class="photo"
+          src="assets/images/gold-wellness-morning.png"
+          alt="아침 웰니스 루틴과 몸愛좋은물 Gold 파우치 이미지"
+        />
+      </div>
+    </section>
+
+    <section id="product">
+      <div class="section-title">
+        <div class="num">03 PRODUCT SPEC</div>
+        <h2>제품 한눈에 보기</h2>
+        <p class="lead">
+          강원도 양양 원포 해역 수심 1,032m에서 취수한 해양심층수를
+          350mL 캡형 파우치에 담았습니다.
+        </p>
+      </div>
+
+      <div class="spec-grid">
+        <div class="spec">
+          <small>제품명</small>
+          <strong>몸愛좋은물 Gold</strong>
+        </div>
+
+        <div class="spec">
+          <small>식품유형</small>
+          <strong>먹는해양심층수</strong>
+        </div>
+
+        <div class="spec">
+          <small>내용량</small>
+          <strong class="gold">350mL</strong>
+        </div>
+
+        <div class="spec">
+          <small>취수 수심</small>
+          <strong class="gold">1,032m</strong>
+        </div>
+
+        <div class="spec">
+          <small>취수 해역</small>
+          <strong>강원도 양양 원포</strong>
+        </div>
+
+        <div class="spec">
+          <small>경도</small>
+          <strong class="gold">300mg/L</strong>
+        </div>
+
+        <div class="spec">
+          <small>포장단위</small>
+          <strong class="gold">36개 / 박스</strong>
+        </div>
+
+        <div class="spec">
+          <small>권장소비자가</small>
+          <strong>&nbsp;</strong>
         </div>
       </div>
 
-      <div class="hero-index" aria-label="워터비스 핵심 정보">
-        <div><b>1,032m</b><span>취수 수심</span></div>
-        <div><b>17.5km</b><span>해상 취수 거리</span></div>
-        <div><b>2,400톤</b><span>일일 최대 취수량</span></div>
-        <div><b>Since 2005</b><span>축적된 기술과 경험</span></div>
+      <div class="cta-row buy-row">
+        <a class="btn primary" href="https://watervis.co.kr/order/">구매하기</a>
+        <a class="btn secondary" href="https://watervis.co.kr/order/#track">주문 조회</a>
       </div>
+      <p class="buy-note">초대받은 분 전용 주문입니다. 입장 코드는 <a href="tel:0336721032">033-672-1032</a>로 문의해 주세요.</p>
     </section>
 
-    <section class="intro" id="company">
-      <div class="container intro-grid">
-        <div class="reveal">
-          <p class="section-kicker">About Watervis</p>
-          <h2 class="section-title">해양심층수의 가능성을<br />연구해 온 전문기업</h2>
-          <p class="section-lead">워터비스는 한국해양연구원 창업기업으로 출발해 해양심층수의 취수, 처리, 미네랄 조정 및 제품화 기술을 축적해 왔습니다.</p>
-
-          <div class="feature-list">
-            <div class="feature-item">
-              <span class="feature-num">01</span>
-              <div><b>해양심층수 개발 역량</b><p>원수 취수부터 탈염·농축·미네랄 블렌딩까지 이어지는 기술 기반</p></div>
-            </div>
-            <div class="feature-item">
-              <span class="feature-num">02</span>
-              <div><b>연구개발 중심 기업</b><p>기업부설연구소를 중심으로 해양 자원의 응용 가능성을 연구</p></div>
-            </div>
-            <div class="feature-item">
-              <span class="feature-num">03</span>
-              <div><b>제품 및 사업화 경험</b><p>먹는 해양심층수와 식품·음료 분야의 OEM·ODM 개발 경험</p></div>
-            </div>
-          </div>
-        </div>
-
-        <figure class="intro-photo reveal">
-          <img src="assets/images/factory-actual.webp" alt="워터비스 실제 공장과 생산시설" loading="lazy" width="1049" height="741" />
-          <figcaption class="photo-badge"><b>양양 생산 기반</b><span>강원특별자치도 양양군 현남면</span></figcaption>
-        </figure>
+    <section id="why">
+      <div class="section-title">
+        <div class="num">04 WHY POUCH</div>
+        <h2>왜 파우치인가</h2>
+        <p class="lead">
+          병을 대체하기 위한 선택이 아니라,
+          깊은 바다의 가치를 더 가볍고 가까운 방식으로 전달하기 위한 새로운 형태입니다.
+        </p>
       </div>
-    </section>
 
-    <section class="numbers" aria-label="워터비스 주요 수치">
-      <div class="container number-grid reveal">
-        <article class="number-card"><strong>2005</strong><b>회사 설립</b><p>해양심층수 기술과 사업의 시작</p></article>
-        <article class="number-card"><strong>1,032m</strong><b>취수 수심</b><p>동해 심층 해역에서 원수 취수</p></article>
-        <article class="number-card"><strong>17.5km</strong><b>취수 거리</b><p>육지에서 해상 취수 지점까지</p></article>
-        <article class="number-card"><strong>2,400t</strong><b>일일 최대 취수량</b><p>안정적인 원수 확보 기반</p></article>
-      </div>
-    </section>
-
-    <section class="depth" id="deep-ocean">
-      <div class="container depth-grid">
-        <div class="reveal">
-          <p class="section-kicker">1,032m Deep Sea Water</p>
-          <h2 class="section-title">수면 아래 1,032m,<br />워터비스의 출발점</h2>
-          <p class="section-lead">워터비스는 양양 앞바다의 깊은 해역에서 해양심층수 원수를 취수합니다. 취수한 원수는 용도에 맞춰 탈염하고 미네랄 농도와 경도를 조정해 제품과 원료로 개발됩니다.</p>
-
-          <div class="depth-points">
-            <article class="depth-point"><span>ORIGIN</span><b>깊은 해역 취수</b><p>동해 수심 1,032m의 원수를 육상 플랜트로 이송합니다.</p></article>
-            <article class="depth-point"><span>PROCESS</span><b>미네랄 조정</b><p>탈염과 농축, 혼합 공정을 통해 목적에 맞는 물을 설계합니다.</p></article>
-            <article class="depth-point"><span>APPLICATION</span><b>다양한 사업화</b><p>먹는 물, 원료, 소금 및 OEM·ODM 제품으로 연결합니다.</p></article>
-          </div>
-        </div>
-
-        <figure class="depth-visual reveal">
-          <img src="assets/images/intake-overview.webp" alt="양양 앞바다 해양심층수 취수 개요" loading="lazy" width="1019" height="675" />
-          <figcaption class="depth-caption">
-            <div><strong>1,032m</strong><span>취수 수심</span></div>
-            <div><strong>17.5km</strong><span>해상 취수 거리</span></div>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="process" id="technology">
-      <div class="container">
-        <div class="process-head reveal">
+      <div class="feature-list">
+        <div class="feature">
+          <div class="icon">01</div>
           <div>
-            <p class="section-kicker">Technology & Production</p>
-            <h2 class="section-title">취수에서 제품까지<br />연결되는 생산 체계</h2>
+            <h3>가볍고 휴대하기 쉬운 구조</h3>
+            <p>
+              350mL 캡형 파우치로 이동, 운동, 업무, 여행 등 다양한 순간에
+              간편하게 휴대할 수 있습니다.
+            </p>
           </div>
-          <p class="section-lead">복잡한 제조공정을 핵심 단계로 단순화했습니다. 실제 운영 및 설비 현황에 따라 상세 내용은 지속적으로 갱신할 수 있습니다.</p>
         </div>
 
-        <div class="process-steps reveal" aria-label="해양심층수 제조공정">
-          <article class="process-step"><span class="step-index">STEP 01</span><h3>취수</h3><p>양양 앞바다의 해양심층수 원수를 육상 플랜트로 이송</p></article>
-          <article class="process-step"><span class="step-index">STEP 02</span><h3>탈염</h3><p>RO 공정을 통해 염분과 물을 분리하고 처리수 생산</p></article>
-          <article class="process-step"><span class="step-index">STEP 03</span><h3>미네랄 조정</h3><p>농축수와 탈염수를 목적에 맞게 혼합하여 경도 설계</p></article>
-          <article class="process-step"><span class="step-index">STEP 04</span><h3>제품화</h3><p>먹는 해양심층수와 다양한 응용제품 생산</p></article>
-          <article class="process-step"><span class="step-index">STEP 05</span><h3>포장·출하</h3><p>생산된 제품을 포장하고 품질 확인 후 출하</p></article>
+        <div class="feature">
+          <div class="icon">02</div>
+          <div>
+            <h3>넓은 전면의 브랜드 경험</h3>
+            <p>
+              블랙 파우치 전면에 깊은 바다의 이미지를 담아
+              프리미엄 브랜드 인상을 전달합니다.
+            </p>
+          </div>
         </div>
 
-        <div class="process-gallery reveal">
-          <figure class="process-photo"><img src="assets/images/production-line.webp" alt="워터비스 생산라인" loading="lazy" /><figcaption>생산라인</figcaption></figure>
-          <figure class="process-photo"><img src="assets/images/process-control.webp" alt="수처리 제어실" loading="lazy" /><figcaption>수처리 제어</figcaption></figure>
-          <figure class="process-photo"><img src="assets/images/palletizer.webp" alt="제품 팔레타이징 설비" loading="lazy" /><figcaption>포장·적재 설비</figcaption></figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="research" aria-labelledby="research-title">
-      <div class="container research-grid">
-        <div class="research-collage reveal" aria-label="워터비스 연구소 이미지">
-          <img src="assets/images/research-lab-1.webp" alt="워터비스 연구원이 실험하는 모습" loading="lazy" />
-          <img src="assets/images/research-lab-2.webp" alt="워터비스 기업부설연구소" loading="lazy" />
-        </div>
-
-        <div class="reveal">
-          <p class="section-kicker">Research & Development</p>
-          <h2 class="section-title" id="research-title">해양 자원의 가치를<br />기술로 확장합니다</h2>
-          <p class="section-lead">기업부설연구소와 축적된 전문인력을 기반으로 해양심층수의 처리 및 응용기술을 연구합니다.</p>
-
-          <div class="research-points">
-            <div class="research-point"><b>탈염·농축 기술</b><span>해양심층수 원수에서 염분과 미네랄을 목적에 맞게 분리</span></div>
-            <div class="research-point"><b>미네랄 블렌딩</b><span>제품 특성에 맞는 경도와 미네랄 구성을 설계</span></div>
-            <div class="research-point"><b>제품 응용개발</b><span>먹는 물, 식품원료, 소금 등 다양한 분야로 확장</span></div>
+        <div class="feature">
+          <div class="icon">03</div>
+          <div>
+            <h3>보관과 진열을 고려한 패키지</h3>
+            <p>
+              세워서 보관할 수 있는 형태로 소비자 경험과
+              유통 편의성을 함께 고려했습니다.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="business" id="business">
-      <div class="container">
-        <div class="reveal">
-          <p class="section-kicker">Business Areas</p>
-          <h2 class="section-title">기술에서 제품으로,<br />제품에서 새로운 사업으로</h2>
-          <p class="section-lead">워터비스는 해양심층수 원수와 처리 기술을 기반으로 자체 제품 및 기업 협력 사업을 전개합니다.</p>
-        </div>
+    <section id="quality">
+      <div class="section-title">
+        <div class="num">05 QUALITY</div>
+        <h2>검증 가능한 수질에서<br>시작됩니다</h2>
+        <p class="lead">
+          워터비스 해양심층수는 정기 수질검사를 통해 기본 수질, 영양염류,
+          주요 원소 및 유해영향물질 항목을 확인합니다.
+        </p>
+      </div>
 
-        <div class="business-grid reveal">
-          <article class="business-card"><div class="business-icon">◉</div><h3>먹는 해양심층수</h3><p>경도별 미네랄 워터와 다양한 용량·포장 형태의 제품 개발</p></article>
-          <article class="business-card"><div class="business-icon">◇</div><h3>OEM·ODM</h3><p>브랜드와 유통 환경에 맞춘 제품 기획, 생산 및 공급 협력</p></article>
-          <article class="business-card"><div class="business-icon">≈</div><h3>원수·처리수</h3><p>해양심층수 원수, 탈염수, 농축수 등 사업 목적에 맞는 공급</p></article>
-          <article class="business-card"><div class="business-icon">✦</div><h3>미네랄 응용제품</h3><p>소금과 식품원료를 포함한 해양 미네랄 응용 분야 개발</p></article>
-        </div>
+      <div class="quality-box">
+        <p>
+          <strong>수심 1,032m 해양심층수</strong>의 청정성과 미네랄 특성을 바탕으로,
+          일상에서 마실 수 있는 프리미엄 파우치 워터를 제안합니다.
+        </p>
       </div>
     </section>
 
-    <section class="pouch" aria-labelledby="pouch-title">
-      <div class="container pouch-card reveal">
-        <div class="pouch-image">
-          <img src="assets/images/pouch-gold.webp" alt="몸애좋은물 Gold 파우치 워터 신제품 소개" loading="lazy" />
-        </div>
-        <div class="pouch-copy">
-          <img class="pouch-brand-logo" src="assets/logos/bodygoodwater-navy.png" alt="몸愛좋은물" width="990" height="444" loading="lazy" />
-          <span class="pouch-label">NEW PRODUCT</span>
-          <h2 id="pouch-title">새로운 파우치 워터의 시작</h2>
-          <p>몸愛좋은물 Gold의 제품 특징과 파우치 워터의 새로운 가능성은 전용 소개 페이지에서 자세히 확인할 수 있습니다.</p>
-          <div class="pouch-actions">
-            <a class="button button-dark button-arrow" href="order/">구매하기</a>
-            <a class="button button-outline" href="https://pouch.watervis.co.kr">파우치 워터 자세히 보기 ↗</a>
-          </div>
-        </div>
+    <section id="contact" class="contact">
+      <div class="section-title">
+        <div class="num">CONTACT</div>
+        <h2>비즈니스 제휴 문의</h2>
+        <p class="lead">
+          유통, 대량 납품, OEM/ODM 및 수출 관련 제휴 문의를 환영합니다.
+        </p>
       </div>
+
+      <div class="contact-card">
+        <p><strong>회사명</strong> ㈜워터비스</p>
+        <p><strong>전화번호</strong> <a href="tel:0336721032">033-672-1032</a></p>
+        <p><strong>이메일</strong> <a href="mailto:admin@watervis.co.kr">admin@watervis.co.kr</a></p>
+        <p><strong>주소</strong> 강원특별자치도 양양군 현남면 원포 1길 53</p>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn primary" href="tel:0336721032">전화 문의</a>
+        <a class="btn secondary" href="mailto:admin@watervis.co.kr">이메일 문의</a>
+      </div>
+
+      <div class="footer-logo">
+        <img src="assets/logos/bodygoodwater-white.png" alt="몸愛좋은물 로고" />
+        <img src="assets/logos/watervis-white.png" alt="워터비스 로고" />
+      </div>
+
+      <p class="notice">
+        본 페이지는 몸愛좋은물 Gold 신제품 소개 및 비즈니스 제휴 안내를 위한 페이지입니다.
+      </p>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="container contact-card reveal">
-        <div>
-          <p class="section-kicker">Contact</p>
-          <h2 class="section-title">워터비스와 새로운 가능성을<br />함께 만들어 보세요</h2>
-          <p>해양심층수 제품 개발, 원료 공급, OEM·ODM 및 파우치 워터 생산에 관한 상담을 진행합니다.</p>
-          <div class="contact-actions">
-            <a class="button button-primary" href="tel:+82336721032">033-672-1032 전화하기</a>
-            <a class="button button-ghost" href="https://pouch.watervis.co.kr">파우치 전용 사이트 ↗</a>
-            <a class="button button-ghost" href="order/#track">주문 조회</a>
-          </div>
-        </div>
-
-        <dl class="contact-info">
-          <div class="contact-row"><dt>회사명</dt><dd>주식회사 워터비스</dd></div>
-          <div class="contact-row"><dt>주소</dt><dd>강원특별자치도 양양군 현남면 원포1길 53</dd></div>
-          <div class="contact-row"><dt>전화</dt><dd><a href="tel:+82336721032">033-672-1032</a></dd></div>
-          <div class="contact-row"><dt>팩스</dt><dd>033-672-5303</dd></div>
-          <div class="contact-row"><dt>이메일</dt><dd><a href="mailto:admin@watervis.co.kr">admin@watervis.co.kr</a></dd></div>
-        </dl>
-      </div>
-    </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brands" aria-label="워터비스와 몸愛좋은물 브랜드">
-        <img class="footer-brand-watervis" src="assets/logos/watervis-navy.png" alt="WATERVIS" width="1156" height="310" loading="lazy" />
-        <span class="footer-brand-divider" aria-hidden="true"></span>
-        <img class="footer-brand-product" src="assets/logos/bodygoodwater-navy.png" alt="몸愛좋은물" width="990" height="444" loading="lazy" />
-      </div>
-      <div>© <span id="current-year">2026</span> WATERVIS CO., LTD. All rights reserved.</div>
-    </div>
-  </footer>
-
-  <script>
-    const header = document.getElementById('header');
-    const menuButton = document.querySelector('.menu-button');
-    const mobileNav = document.getElementById('mobile-nav');
-
-    function syncHeader() {
-      header.classList.toggle('scrolled', window.scrollY > 28);
-    }
-    syncHeader();
-    window.addEventListener('scroll', syncHeader, { passive: true });
-
-    menuButton.addEventListener('click', () => {
-      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-      menuButton.setAttribute('aria-expanded', String(!isOpen));
-      menuButton.setAttribute('aria-label', isOpen ? '메뉴 열기' : '메뉴 닫기');
-      mobileNav.classList.toggle('open', !isOpen);
-      document.body.classList.toggle('nav-open', !isOpen);
-    });
-
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        menuButton.setAttribute('aria-expanded', 'false');
-        menuButton.setAttribute('aria-label', '메뉴 열기');
-        mobileNav.classList.remove('open');
-        document.body.classList.remove('nav-open');
-      });
-    });
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
